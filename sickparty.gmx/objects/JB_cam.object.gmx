@@ -59,28 +59,13 @@ JOGspe = 2;
 DJOGspe = 10;
 RJOGx=0;
 
-switch(room)
-    {
-    case final_factory:
-        MYarray[0] = 1440;
-        MYarray[1] = 1280;
-        MYarray[2] = 2660;
-        break;
-    case clown_room:
-        MYarray[0] = 19600;
-        break;
-    case pooh_stage:
-        MYarray[0] = 240;
-        break;
-    case comix_zone_room:
-        MYarray[0] = 520;
-        break;
-    default:
+
+
         MYarray[0] = 0;
         if (instance_exists(target_obj))
             MYarray[0] = max(0,target_obj.y-140);
-        break;
-    }
+
+    
 cam_y = MYarray[Ycurrent];
 if (instance_exists(target_obj))
     cam_x = target_obj.x;

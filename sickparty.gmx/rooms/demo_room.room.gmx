@@ -40,7 +40,7 @@ with(par_mb)
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="glow_BG" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="-1" stretch="0"/>
+    <background visible="-1" foreground="0" name="&lt;undefined&gt;" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="-1" stretch="0"/>
     <background visible="-1" foreground="0" name="grid_tile_BG" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -62,7 +62,6 @@ with(par_mb)
   <instances>
     <instance objName="obj_player" x="60" y="500" name="inst_4AD26176" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="560" name="inst_7E813235" locked="0" code="" scaleX="40" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="-20" y="0" name="inst_3F0E4699" locked="0" code="" scaleX="1" scaleY="30" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="800" y="560" name="inst_7AA49AC7" locked="0" code="" scaleX="83" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1840" y="480" name="inst_AD10CE03" locked="0" code="" scaleX="13" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ramp_r" x="1680" y="540" name="inst_1844AF31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -165,7 +164,6 @@ with(par_mb)
     <instance objName="obj_ramp_l" x="1020" y="540" name="inst_948A5E38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_climb_r" x="460" y="480" name="inst_A1602A39" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_climb_l" x="880" y="480" name="inst_9C187B69" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="enemy_T" x="680" y="560" name="inst_AF9107EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_move_path" x="0" y="380" name="inst_4031022F" locked="0" code="x1 = x;&#xA;y1 = y;&#xA;x2 = x;&#xA;y2 = y+180;&#xA;&#xA;event_user(0);&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_move" x="160" y="340" name="inst_2DC01AAB" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="40" y="380" name="inst_1E20EA56" locked="0" code="" scaleX="11" scaleY="1" colour="4294967295" rotation="0"/>
