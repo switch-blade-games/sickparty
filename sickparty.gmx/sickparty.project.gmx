@@ -314,6 +314,10 @@
     <sprite>sprites\cell_bubble_spr</sprite>
     <sprite>sprites\cell_blood_spr</sprite>
     <sprite>sprites\lady_stand_spr</sprite>
+    <sprites name="bosses">
+      <sprite>sprites\bug_body_spr</sprite>
+      <sprite>sprites\bug_leg_spr</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="REDACTED">
@@ -325,6 +329,7 @@
         <background>background\grid_tile_BG</background>
       </backgrounds>
     </backgrounds>
+    <background>background\grey_trash</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -606,11 +611,16 @@
     <object>objects\obj_control</object>
     <object>objects\obj_shader</object>
     <object>objects\obj_player</object>
+    <objects name="bug">
+      <object>objects\bug_base</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\bug_room</room>
+      <room>rooms\black_room</room>
       <rooms name="demo_rooms">
         <room>rooms\demo_room</room>
         <room>rooms\demo_room_2</room>
