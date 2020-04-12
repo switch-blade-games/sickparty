@@ -82,6 +82,49 @@ else
 // load skins
 for(var i=0; i&lt;skin.size; i++;)
     anim_load_skin(i);
+    
+    
+    ///NEW JB STUFF
+    //////fonts//////
+
+//small
+global.JOYSTIXsmall=font_add_sprite(joystix_small_spr,ord('!'),true,0)
+
+global.TYPEsmall=font_add_sprite(type_small_font_spr,ord('!'),true,0)
+
+global.BOOKMANsmall=font_add_sprite(bookman_small_spr,ord('!'),true,0)
+
+global.IMPACTsmall=font_add_sprite(impact_small_spr,ord('!'),true,0)
+
+global.MVsmall=font_add_sprite(MV_small_spr,ord('!'),true,0)
+
+
+//med
+global.TYPEmed=font_add_sprite(type_med_spr,ord('!'),true,0)
+
+global.ARABICmed=font_add_sprite(arabic_med_spr,ord('!'),true,0)
+
+global.ARIALmed=font_add_sprite(arial_med_spr,ord('!'),true,0)
+
+global.HELVETICAmed=font_add_sprite(helvetica_med_spr,ord('!'),true,0)
+
+global.JOYSTIXmed=font_add_sprite(joystix_med_spr,ord('!'),true,0)
+
+global.IMPACTmed=font_add_sprite(impact_med_spr,ord('!'),true,0)
+
+global.RANSOMmed=font_add_sprite(ransom_med_spr,ord('!'),true,0)
+
+//med paper
+
+//global.ARABIC37paper=font_add_sprite(arabic_37_paper_spr,ord('!'),true,0)
+
+//large
+global.BIGfont=font_add_sprite(big_font_spr,ord('!'),true,5)
+
+
+
+draw_set_font(global.TYPEmed)
+    //
 
 room_goto_next();</code>
   <enableViews>-1</enableViews>

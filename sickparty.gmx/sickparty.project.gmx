@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="7" name="datafiles">
+  <datafiles number="150" name="datafiles">
     <datafile>
       <name>skins.zip</name>
       <exists>-1</exists>
@@ -55,17 +55,11 @@
     </sounds>
     <sound>sound\snd_menu_hover</sound>
     <sound>sound\snd_menu_select</sound>
+    <sound>sound\junk_10_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
       <sprites name="000-Front End">
-        <sprites name="credits">
-          <sprite>sprites\gang_colors_spr</sprite>
-          <sprite>sprites\yolo_cine_spr</sprite>
-          <sprite>sprites\fox_cine_spr</sprite>
-          <sprite>sprites\pumpkin_cine_spr</sprite>
-          <sprite>sprites\stone_cine_spr</sprite>
-        </sprites>
         <sprites name="engine">
           <sprite>sprites\joystix_font_spr</sprite>
           <sprite>sprites\node_spr</sprite>
@@ -93,91 +87,6 @@
             <sprite>sprites\spr_arrow_h</sprite>
           </sprites>
         </sprites>
-        <sprites name="Cutscene">
-          <sprites name="ending">
-            <sprite>sprites\end_1_spr</sprite>
-            <sprite>sprites\end_2_spr</sprite>
-            <sprite>sprites\end_3_spr</sprite>
-            <sprite>sprites\end_4_spr</sprite>
-            <sprite>sprites\end_44_spr</sprite>
-            <sprite>sprites\end_5_spr</sprite>
-            <sprite>sprites\end_6_spr</sprite>
-            <sprite>sprites\end_7_spr</sprite>
-            <sprite>sprites\end_8_spr</sprite>
-            <sprite>sprites\end_9_spr</sprite>
-            <sprite>sprites\end_10_spr</sprite>
-            <sprite>sprites\ending_pan_spr</sprite>
-          </sprites>
-          <sprites name="time_machine">
-            <sprite>sprites\time_1_spr</sprite>
-            <sprite>sprites\time_2_spr</sprite>
-            <sprite>sprites\time_3_spr</sprite>
-            <sprite>sprites\time_4_spr</sprite>
-            <sprite>sprites\time_5_spr</sprite>
-            <sprite>sprites\time_6_spr</sprite>
-            <sprite>sprites\time_7_spr</sprite>
-            <sprite>sprites\time_8_spr</sprite>
-            <sprite>sprites\time_9_spr</sprite>
-            <sprite>sprites\time_10_spr</sprite>
-            <sprite>sprites\time_11_spr</sprite>
-            <sprite>sprites\time_12_spr</sprite>
-            <sprite>sprites\time_13_spr</sprite>
-            <sprite>sprites\time_14_spr</sprite>
-            <sprite>sprites\time_15_spr</sprite>
-            <sprite>sprites\time_16_spr</sprite>
-            <sprite>sprites\time_17_spr</sprite>
-            <sprite>sprites\time_18_spr</sprite>
-            <sprite>sprites\time_19_spr</sprite>
-            <sprite>sprites\time_20_spr</sprite>
-            <sprite>sprites\time_21_spr</sprite>
-            <sprite>sprites\time_22_spr</sprite>
-            <sprite>sprites\time_222_spr</sprite>
-            <sprite>sprites\time_23_spr</sprite>
-            <sprite>sprites\time_24_spr</sprite>
-            <sprite>sprites\time_25_spr</sprite>
-            <sprite>sprites\time_26_spr</sprite>
-          </sprites>
-          <sprites name="game_over">
-            <sprite>sprites\game_over_BG_spr</sprite>
-          </sprites>
-          <sprites name="opening">
-            <sprite>sprites\open_1_spr</sprite>
-            <sprite>sprites\open_2_spr</sprite>
-            <sprite>sprites\open_3_spr</sprite>
-            <sprite>sprites\open_4_spr</sprite>
-            <sprite>sprites\open_5_spr</sprite>
-            <sprite>sprites\open_6_spr</sprite>
-            <sprite>sprites\open_7_spr</sprite>
-            <sprite>sprites\open_8_spr</sprite>
-          </sprites>
-          <sprites name="no_boss">
-            <sprite>sprites\no_boss_1_spr</sprite>
-            <sprite>sprites\no_boss_2_spr</sprite>
-            <sprite>sprites\no_boss_3_spr</sprite>
-            <sprite>sprites\no_boss_4_spr</sprite>
-            <sprite>sprites\no_boss_5_spr</sprite>
-            <sprite>sprites\no_boss_6_spr</sprite>
-            <sprite>sprites\no_boss_7_spr</sprite>
-            <sprite>sprites\no_boss_8_spr</sprite>
-            <sprite>sprites\no_boss_9_spr</sprite>
-            <sprite>sprites\no_boss_10_spr</sprite>
-            <sprite>sprites\no_boss_11_spr</sprite>
-            <sprite>sprites\no_boss_12_spr</sprite>
-            <sprite>sprites\no_boss_13_spr</sprite>
-          </sprites>
-          <sprites name="panels">
-            <sprite>sprites\stage_1_panel_spr</sprite>
-            <sprite>sprites\stage_3_panel_spr</sprite>
-            <sprite>sprites\stage_4_panel_spr</sprite>
-            <sprite>sprites\stage_5_panel_spr</sprite>
-            <sprite>sprites\stage_6_panel_spr</sprite>
-            <sprite>sprites\stage_7_panel_spr</sprite>
-          </sprites>
-        </sprites>
-        <sprites name="gags">
-          <sprite>sprites\controller_gag_spr</sprite>
-          <sprite>sprites\controller_good_spr</sprite>
-        </sprites>
         <sprites name="title">
           <sprite>sprites\title_crew_spr</sprite>
           <sprite>sprites\nigz_text_spr</sprite>
@@ -187,30 +96,11 @@
           <sprite>sprites\title_back_spr</sprite>
           <sprite>sprites\flame_start_spr</sprite>
         </sprites>
-        <sprites name="player_select">
-          <sprite>sprites\player_select_under_spr</sprite>
-          <sprite>sprites\yolo_select_spr</sprite>
-          <sprite>sprites\fox_select_spr</sprite>
-          <sprite>sprites\stone_select_spr</sprite>
-          <sprite>sprites\pumpkin_select_spr</sprite>
-          <sprite>sprites\switch_pattern_spr</sprite>
-        </sprites>
       </sprites>
       <sprites name="100-Characters">
         <sprite>sprites\msk_player</sprite>
         <sprite>sprites\msk_player_duck</sprite>
         <sprite>sprites\spr_guns</sprite>
-        <sprites name="101-Stone">
-          <sprites name="flying">
-            <sprite>sprites\stone_fly_spr</sprite>
-            <sprite>sprites\stone_shot_spr</sprite>
-          </sprites>
-          <sprites name="moto">
-            <sprite>sprites\stone_vehicle_moto_spr</sprite>
-          </sprites>
-          <sprite>sprites\stone_idle_spr</sprite>
-          <sprite>sprites\stone_walk_test_spr</sprite>
-        </sprites>
         <sprites name="102-Yolo">
           <sprites name="flying">
             <sprite>sprites\yolo_fly_spr</sprite>
@@ -219,21 +109,6 @@
           <sprites name="moto">
             <sprite>sprites\yolo_vehicle_moto_spr</sprite>
           </sprites>
-          <sprite>sprites\yolo_stand_spr</sprite>
-        </sprites>
-        <sprites name="103-Pumpkin">
-          <sprite>sprites\pumpkin_fly_spr</sprite>
-          <sprite>sprites\pumpkin_idle_test_spr</sprite>
-          <sprite>sprites\pumpkin_walk_test_spr</sprite>
-          <sprite>sprites\pumpkin_moto_spr</sprite>
-        </sprites>
-        <sprites name="104-Fox">
-          <sprite>sprites\fox_fly_spr</sprite>
-          <sprite>sprites\foxford_idle_spr</sprite>
-          <sprite>sprites\foxford_walk_spr</sprite>
-        </sprites>
-        <sprites name="flying">
-          <sprite>sprites\white_knight_spr</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -317,6 +192,84 @@
     <sprites name="bosses">
       <sprite>sprites\bug_body_spr</sprite>
       <sprite>sprites\bug_leg_spr</sprite>
+    </sprites>
+    <sprite>sprites\ransom_med_spr</sprite>
+    <sprite>sprites\type_small_font_spr</sprite>
+    <sprite>sprites\arial_med_spr</sprite>
+    <sprite>sprites\arrow_key_spr</sprite>
+    <sprite>sprites\big_font_spr</sprite>
+    <sprite>sprites\arabic_med_spr</sprite>
+    <sprite>sprites\bookman_small_spr</sprite>
+    <sprite>sprites\helvetica_med_spr</sprite>
+    <sprite>sprites\impact_med_spr</sprite>
+    <sprite>sprites\joystix_med_spr</sprite>
+    <sprite>sprites\joystix_small_spr</sprite>
+    <sprite>sprites\key_spr</sprite>
+    <sprite>sprites\left_mouse_spr</sprite>
+    <sprite>sprites\mouse_body_spr</sprite>
+    <sprite>sprites\right_mouse_spr</sprite>
+    <sprite>sprites\impact_small_spr</sprite>
+    <sprites name="dream_sprites">
+      <sprite>sprites\small_soup_spr</sprite>
+      <sprite>sprites\small_stain_spr</sprite>
+      <sprite>sprites\spr_egg</sprite>
+      <sprite>sprites\spr_walk</sprite>
+      <sprite>sprites\slot_font_spr</sprite>
+      <sprite>sprites\type_med_spr</sprite>
+      <sprite>sprites\sprite68</sprite>
+      <sprite>sprites\viral_beads_spr</sprite>
+      <sprite>sprites\viral_triangle_spr</sprite>
+      <sprite>sprites\white_blood_spr</sprite>
+      <sprite>sprites\UI_1_spr</sprite>
+      <sprite>sprites\white_paint_spr</sprite>
+      <sprite>sprites\africa_big_spr</sprite>
+      <sprite>sprites\africa_soup_spr</sprite>
+      <sprite>sprites\arabic_37_paper_spr</sprite>
+      <sprite>sprites\africa_back_spr</sprite>
+      <sprite>sprites\bab_2_spr</sprite>
+      <sprite>sprites\bab_3_spr</sprite>
+      <sprite>sprites\beat_BG_spr</sprite>
+      <sprite>sprites\beat_horde_spr</sprite>
+      <sprite>sprites\black_paint_spr</sprite>
+      <sprite>sprites\blood_spr</sprite>
+      <sprite>sprites\blue_line_spr</sprite>
+      <sprite>sprites\bab_1_spr</sprite>
+      <sprite>sprites\color_clip_spr</sprite>
+      <sprite>sprites\face_hoard_spr</sprite>
+      <sprite>sprites\giger_BG_spr</sprite>
+      <sprite>sprites\ear_hoard_spr</sprite>
+      <sprite>sprites\eye_hoard_spr</sprite>
+      <sprite>sprites\grass_3_spr</sprite>
+      <sprite>sprites\grass_1_spr</sprite>
+      <sprite>sprites\h_square_spr</sprite>
+      <sprite>sprites\grass_2_spr</sprite>
+      <sprite>sprites\hair_hoard_spr</sprite>
+      <sprite>sprites\jungle_BG_spr</sprite>
+      <sprite>sprites\green_paint_spr</sprite>
+      <sprite>sprites\large_soup_spr</sprite>
+      <sprite>sprites\leaf_spr</sprite>
+      <sprite>sprites\black_speckle_spr</sprite>
+      <sprite>sprites\lily_stem_spr</sprite>
+      <sprite>sprites\lily_pads_2_spr</sprite>
+      <sprite>sprites\moth_soup_spr</sprite>
+      <sprite>sprites\lily_pad_spr</sprite>
+      <sprite>sprites\mouth_hoard_spr</sprite>
+      <sprite>sprites\nose_hoard_spr</sprite>
+      <sprite>sprites\orange_line_spr</sprite>
+      <sprite>sprites\orange_paint_spr</sprite>
+      <sprite>sprites\overline_spr</sprite>
+      <sprite>sprites\MV_small_spr</sprite>
+      <sprite>sprites\PC_placeholder_spr</sprite>
+      <sprite>sprites\phy_eye_spr</sprite>
+      <sprite>sprites\red_line_spr</sprite>
+      <sprite>sprites\NPC_placeholder_spr</sprite>
+      <sprite>sprites\red_scoop_spr</sprite>
+      <sprite>sprites\red_ball_large_spr</sprite>
+      <sprite>sprites\red_ball_small_spr</sprite>
+      <sprite>sprites\red_ball_med_spr</sprite>
+      <sprite>sprites\root_spr</sprite>
+      <sprite>sprites\shnab_text_spr</sprite>
+      <sprite>sprites\abstract_ticker_spr</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -448,6 +401,25 @@
     </scripts>
     <script>scripts\camera_deactivate.gml</script>
     <script>scripts\room_init.gml</script>
+    <script>scripts\cactus_start.gml</script>
+    <script>scripts\cactus_draw.gml</script>
+    <script>scripts\clear_array.gml</script>
+    <script>scripts\draw_ransom.gml</script>
+    <script>scripts\draw_UI.gml</script>
+    <script>scripts\hoard_draw.gml</script>
+    <script>scripts\hoard_init.gml</script>
+    <script>scripts\hoard_step.gml</script>
+    <script>scripts\play_snd.gml</script>
+    <script>scripts\random_color.gml</script>
+    <script>scripts\random_font_large.gml</script>
+    <script>scripts\random_font_med.gml</script>
+    <script>scripts\random_font_small.gml</script>
+    <script>scripts\random_text_color.gml</script>
+    <script>scripts\set_colors.gml</script>
+    <script>scripts\snd_pitch.gml</script>
+    <script>scripts\sur_check.gml</script>
+    <script>scripts\toggle_push.gml</script>
+    <script>scripts\word_hoard.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_grayscale.shader</shader>
@@ -456,14 +428,10 @@
     <shader type="GLSLES">shaders\shd_flash.shader</shader>
   </shaders>
   <objects name="objects">
+    <object>objects\text_drawer</object>
+    <object>objects\title_drawer</object>
     <objects name="REDACTED">
       <objects name="000-Front End">
-        <objects name="credits">
-          <object>objects\cine_controller</object>
-          <object>objects\cine_obj</object>
-          <object>objects\painter</object>
-          <object>objects\paint_parent</object>
-        </objects>
         <object>objects\obj_debug_marker</object>
         <object>objects\ep_warning</object>
         <object>objects\obj_gamepad_disconnect</object>
@@ -477,12 +445,6 @@
           <objects name="game_over">
             <object>objects\game_over_controller</object>
           </objects>
-        </objects>
-        <objects name="player_select">
-          <object>objects\player_select_controller</object>
-        </objects>
-        <objects name="panels">
-          <object>objects\panel_controller</object>
         </objects>
         <objects name="title">
           <object>objects\title_controller</object>
@@ -564,6 +526,8 @@
       <object>objects\par_effect</object>
       <object>objects\par_verlet</object>
       <object>objects\par_vehicle</object>
+      <object>objects\sur_parent</object>
+      <object>objects\hoard_parent</object>
     </objects>
     <objects name="weapons">
       <object>objects\obj_bullet</object>
@@ -610,9 +574,29 @@
     <object>objects\obj_menu</object>
     <object>objects\obj_control</object>
     <object>objects\obj_shader</object>
+    <object>objects\random_hoard</object>
     <object>objects\obj_player</object>
     <objects name="bug">
       <object>objects\bug_base</object>
+    </objects>
+    <object>objects\shnab_hoard</object>
+    <object>objects\pollack_hoard</object>
+    <object>objects\view_grid</object>
+    <object>objects\ticker_hoard</object>
+    <object>objects\speckle_hoard</object>
+    <object>objects\bobble_base</object>
+    <objects name="hoards">
+      <object>objects\hoard_toggle</object>
+      <object>objects\blank_hoard</object>
+      <object>objects\bab_hoard</object>
+      <object>objects\beat_hoard</object>
+      <object>objects\lily_hoard</object>
+      <object>objects\grass_hoard</object>
+      <object>objects\africa_hoard</object>
+      <object>objects\jungle_hoard</object>
+      <object>objects\stain_hoard</object>
+      <object>objects\static_hoard</object>
+      <object>objects\virus_hoard</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -620,6 +604,7 @@
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
       <room>rooms\bug_room</room>
+      <room>rooms\dream_room</room>
       <room>rooms\black_room</room>
       <rooms name="demo_rooms">
         <room>rooms\demo_room</room>
