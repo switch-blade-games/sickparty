@@ -135,7 +135,7 @@ draw_surface_part(VIEWsur,320,160,80,80,0,160)
 
 }
 
-draw_sprite(sprite_index,-1,0,0)
+//draw_sprite(sprite_index,-1,0,0)
 
 
 /*

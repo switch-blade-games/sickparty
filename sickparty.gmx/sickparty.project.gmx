@@ -187,6 +187,7 @@
       <sprite>sprites\P2_mark_spr</sprite>
     </sprites>
     <sprite>sprites\cell_bubble_spr</sprite>
+    <sprite>sprites\emergency_spr</sprite>
     <sprite>sprites\cell_blood_spr</sprite>
     <sprite>sprites\lady_stand_spr</sprite>
     <sprites name="bosses">
@@ -201,9 +202,14 @@
     <sprite>sprites\arabic_med_spr</sprite>
     <sprite>sprites\bookman_small_spr</sprite>
     <sprite>sprites\helvetica_med_spr</sprite>
+    <sprite>sprites\cossack_BG_spr</sprite>
+    <sprite>sprites\record_needle_spr</sprite>
     <sprite>sprites\impact_med_spr</sprite>
+    <sprite>sprites\mic_spr</sprite>
+    <sprite>sprites\dark_doll_spr</sprite>
     <sprite>sprites\joystix_med_spr</sprite>
     <sprite>sprites\joystix_small_spr</sprite>
+    <sprite>sprites\sky_brown_spr</sprite>
     <sprite>sprites\key_spr</sprite>
     <sprite>sprites\left_mouse_spr</sprite>
     <sprite>sprites\mouse_body_spr</sprite>
@@ -430,6 +436,7 @@
   <objects name="objects">
     <object>objects\text_drawer</object>
     <object>objects\title_drawer</object>
+    <object>objects\bobble_base</object>
     <objects name="REDACTED">
       <objects name="000-Front End">
         <object>objects\obj_debug_marker</object>
@@ -579,17 +586,16 @@
     <objects name="bug">
       <object>objects\bug_base</object>
     </objects>
-    <object>objects\shnab_hoard</object>
-    <object>objects\pollack_hoard</object>
     <object>objects\view_grid</object>
-    <object>objects\ticker_hoard</object>
-    <object>objects\speckle_hoard</object>
-    <object>objects\bobble_base</object>
     <objects name="hoards">
       <object>objects\hoard_toggle</object>
       <object>objects\blank_hoard</object>
       <object>objects\bab_hoard</object>
+      <object>objects\pollack_hoard</object>
       <object>objects\beat_hoard</object>
+      <object>objects\shnab_hoard</object>
+      <object>objects\speckle_hoard</object>
+      <object>objects\ticker_hoard</object>
       <object>objects\lily_hoard</object>
       <object>objects\grass_hoard</object>
       <object>objects\africa_hoard</object>
