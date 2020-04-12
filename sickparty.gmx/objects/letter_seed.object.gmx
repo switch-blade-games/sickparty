@@ -56,7 +56,7 @@ image_angle=random(360)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>event_inherited();
 
 motion_add(270,grav)
 

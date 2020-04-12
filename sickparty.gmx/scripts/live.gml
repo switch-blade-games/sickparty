@@ -24,6 +24,7 @@ if (move_state == mState.dead)
         mb_id = noone;
         
         // normal vs. moto respawn
+        /*
         if (instance_exists(motor_controller))
         or (instance_exists(sub_controller))
             {
@@ -35,6 +36,10 @@ if (move_state == mState.dead)
             move_state = mState.walk;
             drop = true;
             }
+        */
+        
+        move_state = mState.walk;
+        drop = true;
         
         // respawn coordinates
         if (point_in_rectangle(xstart,ystart,view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yview[0]+view_hview[0]))

@@ -56,7 +56,9 @@ SEEDnoise=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(random(ODDS)&lt;1)
+            <string>event_inherited();
+
+if(random(ODDS)&lt;1)
 if(instance_number(letter_seed)&lt;SEEDmax)
 {
 
