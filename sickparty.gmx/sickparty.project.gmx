@@ -193,18 +193,20 @@
     <sprites name="bosses">
       <sprite>sprites\bug_body_spr</sprite>
       <sprite>sprites\bug_leg_spr</sprite>
+      <sprite>sprites\wheat_head_spr</sprite>
+      <sprite>sprites\wheat_ball_spr</sprite>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
     <sprite>sprites\type_small_font_spr</sprite>
     <sprite>sprites\arial_med_spr</sprite>
     <sprite>sprites\arrow_key_spr</sprite>
+    <sprite>sprites\impact_med_spr</sprite>
     <sprite>sprites\big_font_spr</sprite>
     <sprite>sprites\arabic_med_spr</sprite>
     <sprite>sprites\bookman_small_spr</sprite>
     <sprite>sprites\helvetica_med_spr</sprite>
     <sprite>sprites\cossack_BG_spr</sprite>
     <sprite>sprites\record_needle_spr</sprite>
-    <sprite>sprites\impact_med_spr</sprite>
     <sprite>sprites\mic_spr</sprite>
     <sprite>sprites\dark_doll_spr</sprite>
     <sprite>sprites\joystix_med_spr</sprite>
@@ -215,6 +217,9 @@
     <sprite>sprites\mouse_body_spr</sprite>
     <sprite>sprites\right_mouse_spr</sprite>
     <sprite>sprites\impact_small_spr</sprite>
+    <sprite>sprites\ball_20_spr</sprite>
+    <sprite>sprites\ball_40_spr</sprite>
+    <sprite>sprites\tip_spr</sprite>
     <sprites name="dream_sprites">
       <sprite>sprites\small_soup_spr</sprite>
       <sprite>sprites\small_stain_spr</sprite>
@@ -277,6 +282,7 @@
       <sprite>sprites\shnab_text_spr</sprite>
       <sprite>sprites\abstract_ticker_spr</sprite>
     </sprites>
+    <sprite>sprites\letter_seed_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="REDACTED">
@@ -426,6 +432,8 @@
     <script>scripts\sur_check.gml</script>
     <script>scripts\toggle_push.gml</script>
     <script>scripts\word_hoard.gml</script>
+    <script>scripts\cut_create.gml</script>
+    <script>scripts\cut_draw.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_grayscale.shader</shader>
@@ -581,7 +589,6 @@
     <object>objects\obj_menu</object>
     <object>objects\obj_control</object>
     <object>objects\obj_shader</object>
-    <object>objects\random_hoard</object>
     <object>objects\obj_player</object>
     <objects name="bug">
       <object>objects\bug_base</object>
@@ -600,15 +607,24 @@
       <object>objects\grass_hoard</object>
       <object>objects\africa_hoard</object>
       <object>objects\jungle_hoard</object>
+      <object>objects\random_hoard</object>
       <object>objects\stain_hoard</object>
       <object>objects\static_hoard</object>
       <object>objects\virus_hoard</object>
     </objects>
+    <objects name="wheat">
+      <object>objects\wheat_controller</object>
+      <object>objects\wheat_ball</object>
+      <object>objects\wheat_head</object>
+      <object>objects\letter_seed</object>
+    </objects>
+    <object>objects\ball_40</object>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\wheat_room</room>
       <room>rooms\bug_room</room>
       <room>rooms\dream_room</room>
       <room>rooms\black_room</room>
