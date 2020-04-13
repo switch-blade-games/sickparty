@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>par_enemy</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,21 +25,37 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemy_init(100)
+            <string>with(wheat_controller)
+state=WAIT
+
+RANGE=120
 
 
-SEEDmax=10
+alarm[0]=180
 
-ODDS=10
+with(mast)
+    instance_destroy()
+    
+with(letter_seed)
+    instance_destroy()
+    
+    
+instance_create(0,0,lily_hoard)
 
-SEEDspe=1
-SEEDnoise=1
+//0= song
+//1= ODDS
+//2= MIN
+//3= MAX
+//4= PITCH (no more than 1)
+
+with(music_player)
+MC_2_create(junk_1_snd,100,200,audio_sound_length(junk_1_snd),0.1)
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -56,9 +72,24 @@ SEEDnoise=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(life&lt;=0){
-    var DEADson=instance_create(x,y,wheat_head_dead);
-    DEADson.image_angle=image_angle
+            <string>with(wheat_controller)
+    instance_destroy()
+    
+with(wheat_ball)
+    instance_destroy()
+    
+instance_destroy()
+
+play_snd(tube_snd,false)
+    
+
+with(lily_hoard)
+    instance_destroy()
+
+    
+with(music_player){
+MC_2_create(-1,20,20,audio_sound_length(junk_1_snd),0.4)
+audio_stop_sound(junk_1_snd)
 }
 </string>
           </argument>
@@ -82,71 +113,15 @@ SEEDnoise=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
+            <string>if(random(4)&lt;1){
 
-if(random(ODDS)&lt;1)
-if(instance_number(letter_seed)&lt;SEEDmax)
-{
-    snd_pitch(squeak_toy_11,0.5)
-play_snd(squeak_toy_11,false)
 
-    var SON=instance_create(x,y,letter_seed);
-    
-    SON.direction=image_angle
-    SON.speed=SEEDspe+random(SEEDnoise)
-    
+snd_pitch(noise_17_snd,0.5)
+play_snd(noise_17_snd,false)
+
+instance_create(x+lengthdir_x(random(RANGE),random(360)),y+lengthdir_y(random(RANGE),random(360)),explode_black)
+
 }
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="par_projectile">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(wheat_controller){
-ANGRY=true
-alarm[1]=ANGRYtime
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_enemy_self()
 </string>
           </argument>
         </arguments>

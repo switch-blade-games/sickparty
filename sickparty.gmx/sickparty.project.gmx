@@ -56,6 +56,16 @@
     <sound>sound\snd_menu_hover</sound>
     <sound>sound\snd_menu_select</sound>
     <sound>sound\junk_10_snd</sound>
+    <sound>sound\squeak_toy_11</sound>
+    <sound>sound\rustle_snd</sound>
+    <sound>sound\whale_snd</sound>
+    <sound>sound\mast_snd</sound>
+    <sound>sound\noise_17_snd</sound>
+    <sound>sound\jungle_snd</sound>
+    <sound>sound\skreet_snd</sound>
+    <sound>sound\junk_1_snd</sound>
+    <sound>sound\tube_snd</sound>
+    <sound>sound\chimes_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -191,10 +201,21 @@
     <sprite>sprites\cell_blood_spr</sprite>
     <sprite>sprites\lady_stand_spr</sprite>
     <sprites name="bosses">
-      <sprite>sprites\bug_body_spr</sprite>
-      <sprite>sprites\bug_leg_spr</sprite>
-      <sprite>sprites\wheat_head_spr</sprite>
-      <sprite>sprites\wheat_ball_spr</sprite>
+      <sprites name="bug">
+        <sprite>sprites\bug_body_spr</sprite>
+        <sprite>sprites\bug_leg_spr</sprite>
+      </sprites>
+      <sprites name="wheat">
+        <sprite>sprites\wheat_ball_spr</sprite>
+        <sprite>sprites\wheat_head_spr</sprite>
+      </sprites>
+      <sprites name="desire">
+        <sprite>sprites\desire_head_spr</sprite>
+        <sprite>sprites\desire_eye_spr</sprite>
+        <sprite>sprites\desire_mouth_spr</sprite>
+        <sprite>sprites\desire_eye_wink_spr</sprite>
+        <sprite>sprites\eagle_shot_spr</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
     <sprite>sprites\type_small_font_spr</sprite>
@@ -283,6 +304,8 @@
       <sprite>sprites\abstract_ticker_spr</sprite>
     </sprites>
     <sprite>sprites\letter_seed_spr</sprite>
+    <sprite>sprites\mast_spr</sprite>
+    <sprite>sprites\explode_black_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="REDACTED">
@@ -434,6 +457,14 @@
     <script>scripts\word_hoard.gml</script>
     <script>scripts\cut_create.gml</script>
     <script>scripts\cut_draw.gml</script>
+    <script>scripts\MC_1_create.gml</script>
+    <script>scripts\MC_1_step.gml</script>
+    <script>scripts\MC_2_create.gml</script>
+    <script>scripts\MC_2_step.gml</script>
+    <script>scripts\MC_3_create.gml</script>
+    <script>scripts\MC_3_step.gml</script>
+    <script>scripts\MC_4_create.gml</script>
+    <script>scripts\MC_4_step.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_grayscale.shader</shader>
@@ -443,6 +474,7 @@
   </shaders>
   <objects name="objects">
     <object>objects\text_drawer</object>
+    <object>objects\music_player</object>
     <object>objects\title_drawer</object>
     <object>objects\bobble_base</object>
     <objects name="REDACTED">
@@ -560,6 +592,7 @@
       <object>objects\obj_dust</object>
       <object>objects\obj_particle</object>
       <object>objects\small_explode</object>
+      <object>objects\explode_black</object>
       <object>objects\explode_big</object>
       <object>objects\screen_explode</object>
       <object>objects\mini_exploder</object>
@@ -616,15 +649,23 @@
       <object>objects\wheat_controller</object>
       <object>objects\wheat_ball</object>
       <object>objects\wheat_head</object>
+      <object>objects\wheat_head_dead</object>
       <object>objects\letter_seed</object>
+      <object>objects\mast</object>
     </objects>
     <object>objects\ball_40</object>
+    <objects name="desire">
+      <object>objects\desire_controller</object>
+      <object>objects\desire_obj</object>
+      <object>objects\eagle_shot</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
       <room>rooms\wheat_room</room>
+      <room>rooms\desire_room</room>
       <room>rooms\bug_room</room>
       <room>rooms\dream_room</room>
       <room>rooms\black_room</room>

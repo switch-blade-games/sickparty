@@ -167,14 +167,18 @@ if(state=WAG){
 
     if(WAGstate=WAGup){
         WAGang+=WAGset
-        if(WAGang&gt;=WAGmax)
+        if(WAGang&gt;=WAGmax){
+            play_snd(skreet_snd,false)
             WAGstate=WAGdown
+            }
     }
     
     if(WAGstate=WAGdown){
         WAGang-=WAGset
-        if(WAGang&lt;=-WAGmax)
+        if(WAGang&lt;=-WAGmax){
+        play_snd(skreet_snd,false)
             WAGstate=WAGup
+            }
     }
     
 }

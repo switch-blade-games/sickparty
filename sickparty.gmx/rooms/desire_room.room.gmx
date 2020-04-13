@@ -14,7 +14,7 @@
 
 background_color=DARKpurple
 
-instance_create(0,0,wheat_controller)
+instance_create(0,0,desire_controller)
 
 instance_create(0,0,music_player)
 

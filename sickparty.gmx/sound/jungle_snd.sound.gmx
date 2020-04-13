@@ -2,7 +2,7 @@
 <sound>
   <kind>3</kind>
   <extension>.ogg</extension>
-  <origname>sound\audio\bullet_snd.ogg</origname>
+  <origname>sound\audio\jungle_snd.ogg</origname>
   <effects>0</effects>
   <volume>
     <volume>1</volume>
@@ -15,15 +15,15 @@
     <sampleRate>44100</sampleRate>
   </sampleRates>
   <types>
-    <type>2</type>
+    <type>0</type>
   </types>
   <bitDepths>
     <bitDepth>16</bitDepth>
   </bitDepths>
   <preload>-1</preload>
-  <data>bullet_snd.ogg</data>
-  <compressed>1</compressed>
-  <streamed>1</streamed>
+  <data>jungle_snd.ogg</data>
+  <compressed>0</compressed>
+  <streamed>0</streamed>
   <uncompressOnLoad>0</uncompressOnLoad>
   <audioGroup>0</audioGroup>
 </sound>
