@@ -49,78 +49,9 @@ else
 img_speed = -1;
 switch(skin_id)
     {
-    case skin.stone:
-        off_x = 0;
-        off_y = 36;
-        img_speed[aState.flat_idle] = 0.2;
-        img_speed[aState.flat_wait] = 0.2;
-        img_speed[aState.flat_fire] = 0.2;
-        img_speed[aState.walk_move] = 0.22;
-        img_speed[aState.walk_fire] = 0.22;
-        img_speed[aState.flat_duck_idle] = 0.2;
-        img_speed[aState.flat_duck_fire] = 0.2;
-        img_speed[aState.wc_idle] = 0.2;
-        img_speed[aState.wc_move] = 0.2;
-        img_speed[aState.wc_fire] = 0.2;
-        img_speed[aState.mb_idle] = 0.2;
-        img_speed[aState.mb_move] = 0.2;
-        img_speed[aState.mb_fire] = 0.2;
-        img_speed[aState.moto_idle] = 0.2;
-        img_speed[aState.moto_fire] = 0.2;
-        img_speed[aState.roll] = 0.5;
-        img_speed[aState.dead_roll] = 0.3;
-        img_speed[aState.dead] = 0;
-        img_speed[aState.victory] = 0.2;
-        break;
-    case skin.foxford:
-        off_x = 0;
-        off_y = 36;
-        img_speed[aState.flat_idle] = 0.2;
-        img_speed[aState.flat_wait] = 0.2;
-        img_speed[aState.flat_fire] = 0.2;
-        img_speed[aState.walk_move] = 0.22;
-        img_speed[aState.walk_fire] = 0.22;
-        img_speed[aState.flat_duck_idle] = 0.2;
-        img_speed[aState.flat_duck_fire] = 0.2;
-        img_speed[aState.wc_idle] = 0.2;
-        img_speed[aState.wc_move] = 0.2;
-        img_speed[aState.wc_fire] = 0.2;
-        img_speed[aState.mb_idle] = 0.2;
-        img_speed[aState.mb_move] = 0.2;
-        img_speed[aState.mb_fire] = 0.2;
-        img_speed[aState.moto_idle] = 0.2;
-        img_speed[aState.moto_fire] = 0.2;
-        img_speed[aState.roll] = 0.5;
-        img_speed[aState.dead_roll] = 0.3;
-        img_speed[aState.dead] = 0.2;
-        img_speed[aState.victory] = 0.2;
-        break;
-    case skin.yolo:
+    case skin.scratch:
         off_x = 0;
         off_y = 20;
-        img_speed[aState.flat_idle] = 0.2;
-        img_speed[aState.flat_wait] = 0.2;
-        img_speed[aState.flat_fire] = 0.2;
-        img_speed[aState.walk_move] = 0.22;
-        img_speed[aState.walk_fire] = 0.22;
-        img_speed[aState.flat_duck_idle] = 0.2;
-        img_speed[aState.flat_duck_fire] = 0.2;
-        img_speed[aState.wc_idle] = 0.2;
-        img_speed[aState.wc_move] = 0.2;
-        img_speed[aState.wc_fire] = 0.2;
-        img_speed[aState.mb_idle] = 0.2;
-        img_speed[aState.mb_move] = 0.2;
-        img_speed[aState.mb_fire] = 0.2;
-        img_speed[aState.moto_idle] = 0.2;
-        img_speed[aState.moto_fire] = 0.2;
-        img_speed[aState.roll] = 0.5;
-        img_speed[aState.dead_roll] = 0.3;
-        img_speed[aState.dead] = 0.2;
-        img_speed[aState.victory] = 0.2;
-        break;
-    case skin.pumpkin:
-        off_x = 0;
-        off_y = 36;
         img_speed[aState.flat_idle] = 0.2;
         img_speed[aState.flat_wait] = 0.2;
         img_speed[aState.flat_fire] = 0.2;

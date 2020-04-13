@@ -43,18 +43,12 @@ if (!instance_exists(dev_cheater))
 // player skin enums
 enum skin
     {
-    stone,
-    pumpkin,
-    foxford,
-    yolo,
+    scratch,
     size
     }
 
 // player skin
-global.skin_tag[skin.stone]     = "101-stone";
-global.skin_tag[skin.pumpkin]   = "102-pumpkin";
-global.skin_tag[skin.foxford]   = "103-fox";
-global.skin_tag[skin.yolo]      = "104-yolo";
+global.skin_tag[skin.scratch] = "scratch";
 
 for(var i=0; i&lt;skin.size; i++;)
     {
@@ -82,7 +76,6 @@ else
 // load skins
 for(var i=0; i&lt;skin.size; i++;)
     anim_load_skin(i);
-    
     
     ///NEW JB STUFF
     //////fonts//////

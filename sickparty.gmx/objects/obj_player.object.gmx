@@ -129,7 +129,7 @@ flame_ang = 0;
 gun_y = -18;
 
 anim_init();
-skin_id = skin.yolo;
+skin_id = skin.scratch;
 anim_set_skin(skin_id);
 </string>
           </argument>
@@ -159,7 +159,7 @@ or (gamepad_check_pressed_all(gpinput.bumpl))
     {
     skin_id++;
     if (skin_id &gt;= skin.size)
-        skin_id = skin.stone;
+        skin_id = skin.scratch;
     anim_set_skin(skin_id);
     }
 // load skin files

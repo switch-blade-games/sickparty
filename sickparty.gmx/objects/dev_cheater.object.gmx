@@ -376,7 +376,10 @@ file_text_close(file);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.DEBUG)
+            <string>// THIS BREAKS THE RANSOM FONT TEXT STUFF
+// draw_set_font(global.fnt_joystix);
+
+if (global.DEBUG)
     {
     var vx = view_xview[0];
     var vy = view_yview[0];
