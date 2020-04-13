@@ -215,6 +215,7 @@
         <sprite>sprites\desire_mouth_spr</sprite>
         <sprite>sprites\desire_eye_wink_spr</sprite>
         <sprite>sprites\eagle_shot_spr</sprite>
+        <sprite>sprites\blue_monkey_spr</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
@@ -664,8 +665,8 @@
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
-      <room>rooms\wheat_room</room>
       <room>rooms\desire_room</room>
+      <room>rooms\wheat_room</room>
       <room>rooms\bug_room</room>
       <room>rooms\dream_room</room>
       <room>rooms\black_room</room>
