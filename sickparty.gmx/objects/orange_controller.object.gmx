@@ -25,28 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//0= song
-//1= ODDS
-//2= MIN
-//3= MAX
-//4= PITCH (0=nothing, 1=max)
+            <string>global.ORGx=0
+global.ORGy=0
 
+ymin=160
+yrange=40
 
-if(room=wheat_room){
-MC_1_create(whale_snd,40,180,audio_sound_length(whale_snd),0.3)
-MC_2_create(-1,20,20,audio_sound_length(jungle_snd),0.4)
-MC_3_create(-1,20,40,180,0.5)
-MC_4_create(-1,40,180,0,0.3)
+repeat(20){
+
+    instance_create(global.ORGx-20+random(420),global.ORGy+ymin+random(yrange),droplet)
+    
 }
 
+ODDS=10
 
-if(room=orange_room){
-MC_1_create(scifi_5_snd,40,180,audio_sound_length(scifi_5_snd),0.3)
-MC_2_create(rustle_3_snd,20,20,audio_sound_length(rustle_3_snd),0.4)
-MC_3_create(-1,20,40,180,0.5)
-MC_4_create(-1,40,180,0,0.3)
-}
-
+DROPmax=40
 </string>
           </argument>
         </arguments>
@@ -69,14 +62,16 @@ MC_4_create(-1,40,180,0,0.3)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MC_1_step()
+            <string>if(instance_number(droplet)&lt;DROPmax)
+if(random(ODDS)&lt;1)
+instance_create(global.ORGx+420,global.ORGy+ymin+random(yrange),droplet)
 
-MC_2_step()
 
+if(instance_number(red_ball)&lt;5){
 
-MC_3_step()
-
-MC_4_step()
+    instance_create(view_xview[0]+440,view_yview[0]-80+random(100),red_ball)
+    
+}
 </string>
           </argument>
         </arguments>

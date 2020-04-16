@@ -63,9 +63,12 @@
     <sound>sound\noise_17_snd</sound>
     <sound>sound\jungle_snd</sound>
     <sound>sound\skreet_snd</sound>
+    <sound>sound\scifi_5_snd</sound>
+    <sound>sound\rustle_3_snd</sound>
     <sound>sound\junk_1_snd</sound>
     <sound>sound\tube_snd</sound>
     <sound>sound\chimes_snd</sound>
+    <sound>sound\ricko_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -184,6 +187,7 @@
     <sprites name="camera">
       <sprite>sprites\cam_icon_spr</sprite>
       <sprite>sprites\UR_cam_spr</sprite>
+      <sprite>sprites\cam_U_spr</sprite>
       <sprite>sprites\R_cam_spr</sprite>
       <sprite>sprites\R_lock_spr</sprite>
       <sprite>sprites\R_ramp_finish_spr</sprite>
@@ -216,6 +220,26 @@
         <sprite>sprites\desire_eye_wink_spr</sprite>
         <sprite>sprites\eagle_shot_spr</sprite>
         <sprite>sprites\blue_monkey_spr</sprite>
+        <sprite>sprites\desire_mouth_open_spr</sprite>
+      </sprites>
+      <sprites name="orange">
+        <sprite>sprites\orange_ball_spr</sprite>
+        <sprite>sprites\droplet_spr</sprite>
+        <sprite>sprites\orange_cloud_spr</sprite>
+      </sprites>
+      <sprites name="blue_branch">
+        <sprite>sprites\blue_head_1_spr</sprite>
+        <sprite>sprites\blue_head_2_spr</sprite>
+        <sprite>sprites\blue_head_3_spr</sprite>
+        <sprite>sprites\blue_tri_spr</sprite>
+        <sprite>sprites\blue_zag_spr</sprite>
+        <sprite>sprites\dark_ball_spr</sprite>
+        <sprite>sprites\med_ball_spr</sprite>
+        <sprite>sprites\light_ball_spr</sprite>
+        <sprite>sprites\red_ball_spr</sprite>
+        <sprite>sprites\honey_spr</sprite>
+        <sprite>sprites\eric_spr</sprite>
+        <sprite>sprites\eric_mask_spr</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
@@ -319,6 +343,7 @@
       </backgrounds>
     </backgrounds>
     <background>background\grey_trash</background>
+    <background>background\TS_20</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -618,6 +643,7 @@
       <object>objects\P1_mark</object>
       <object>objects\P2_mark</object>
       <object>objects\cam_push_R</object>
+      <object>objects\U_cam</object>
     </objects>
     <object>objects\dev_cheater</object>
     <object>objects\obj_menu</object>
@@ -657,14 +683,30 @@
     <object>objects\ball_40</object>
     <objects name="desire">
       <object>objects\desire_controller</object>
+      <object>objects\desire_mouth</object>
       <object>objects\desire_obj</object>
       <object>objects\eagle_shot</object>
+      <object>objects\blue_monkey</object>
+    </objects>
+    <objects name="orange">
+      <object>objects\orange_controller</object>
+      <object>objects\droplet</object>
+      <object>objects\orange_ball</object>
+      <object>objects\orange_cloud</object>
+    </objects>
+    <objects name="blue_branch">
+      <object>objects\blue_rig_maker</object>
+      <object>objects\blue_rig_under</object>
+      <object>objects\blue_face</object>
+      <object>objects\red_ball</object>
+      <object>objects\eric</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\orange_room</room>
       <room>rooms\desire_room</room>
       <room>rooms\wheat_room</room>
       <room>rooms\bug_room</room>
