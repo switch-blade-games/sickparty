@@ -409,6 +409,7 @@
         </scripts>
       </scripts>
       <script>scripts\log.gml</script>
+	  <script>scripts\log_gmedit.gml</script>
       <script>scripts\dec_to_hex.gml</script>
       <script>scripts\hex_to_dec.gml</script>
       <script>scripts\bezier.gml</script>

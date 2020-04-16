@@ -31,6 +31,12 @@
 //3= MAX
 //4= PITCH (0=nothing, 1=max)
 
+MC_1_create(whale_snd,40,180,audio_sound_length(whale_snd),0.3)
+MC_2_create(-1,20,20,audio_sound_length(jungle_snd),0.4)
+MC_3_create(-1,20,40,180,0.5)
+MC_4_create(-1,40,180,0,0.3)
+
+vol = global.CFG[config.BGMgain];
 
 if(room=wheat_room){
 MC_1_create(whale_snd,40,180,audio_sound_length(whale_snd),0.3)
@@ -39,14 +45,12 @@ MC_3_create(-1,20,40,180,0.5)
 MC_4_create(-1,40,180,0,0.3)
 }
 
-
 if(room=orange_room){
 MC_1_create(scifi_5_snd,40,180,audio_sound_length(scifi_5_snd),0.3)
 MC_2_create(rustle_3_snd,20,20,audio_sound_length(rustle_3_snd),0.4)
 MC_3_create(-1,20,40,180,0.5)
 MC_4_create(-1,40,180,0,0.3)
 }
-
 </string>
           </argument>
         </arguments>
@@ -70,13 +74,22 @@ MC_4_create(-1,40,180,0,0.3)
           <argument>
             <kind>1</kind>
             <string>MC_1_step()
-
 MC_2_step()
-
-
 MC_3_step()
-
 MC_4_step()
+
+if (vol != global.CFG[config.BGMgain])
+    {
+    vol = global.CFG[config.BGMgain];
+    if (CHANNEL1 &gt; -1) and (audio_is_playing(CHANNEL1))
+        audio_sound_gain(CHANNEL1,vol,0);
+    if (CHANNEL2 &gt; -1) and (audio_is_playing(CHANNEL2))
+        audio_sound_gain(CHANNEL2,vol,0);
+    if (CHANNEL3 &gt; -1) and (audio_is_playing(CHANNEL3))
+        audio_sound_gain(CHANNEL3,vol,0);
+    if (CHANNEL4 &gt; -1) and (audio_is_playing(CHANNEL4))
+        audio_sound_gain(CHANNEL4,vol,0);
+    }
 </string>
           </argument>
         </arguments>
