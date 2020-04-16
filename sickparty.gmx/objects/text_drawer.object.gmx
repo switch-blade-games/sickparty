@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MYsnd=latch_2_snd
+            <string>MYsnd=whale_snd
 
 SMALL=1
 MED=2
@@ -44,6 +44,9 @@ MYtext="Sick Party"
 //assign a starting color for each letter
 
 var i=0;
+
+FONTsize=MED
+
 repeat(string_length(MYtext)){
 
     COL[i]=random_text_color()
