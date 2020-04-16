@@ -1,4 +1,4 @@
-/// config_save(filepath);
+/// config_save([filepath]);
 
 if (argument_count > 0)
     var _filepath = argument[0];
@@ -7,7 +7,7 @@ else
 
 var _time = get_timer();
 
-log("Attempting to save configuration...","["+string(_filepath)+"]");
+log_gmedit("Attempting to save configuration...","["+string(_filepath)+"]","#777");
 
 var _file = file_text_open_write(_filepath);
 file_text_write_real(_file,global.CFGversion);
@@ -23,4 +23,4 @@ for(var i=0; i<config.size; i++;)
 
 file_text_close(_file);
 
-log("Configuration saved! ["+string(get_timer()-_time)+"ms]");
+log_gmedit("Configuration saved! ["+string(get_timer()-_time)+"ms]","#777");

@@ -69,9 +69,9 @@ if (!directory_exists(working_directory+"skins\"))
 if (file_exists(working_directory+"skins.zip"))
     success = zip_unzip(working_directory+"skins.zip",working_directory+"skins\");
 if (success &lt;= 0)
-    log("[ERROR] MISSING SKIN FILES!");
+    log_gmedit("[ERROR] MISSING SKIN FILES!","red");
 else
-    log("Successfully unpacked ["+string(success)+"] skin files!");
+    log_gmedit("Successfully unpacked ["+string(success)+"] skin files!","#777");
 
 // load skins
 for(var i=0; i&lt;skin.size; i++;)

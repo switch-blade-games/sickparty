@@ -144,23 +144,9 @@ with(par_mb)
     <instance objName="obj_climb_l" x="7780" y="4980" name="inst_EB7CD64A" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_climb_r" x="7400" y="4980" name="inst_BF92E6A6" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_mb" x="780" y="7560" name="inst_CE3F5280" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NPC_dummy" x="1760" y="7720" name="inst_CB29D3F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NPC_dummy" x="1840" y="7720" name="inst_2626B29D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="NPC_dummy" x="1940" y="7720" name="inst_4C57F138" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_climb_r" x="0" y="7260" name="inst_9A1A69F7" locked="0" code="" scaleX="1" scaleY="23" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="140" y="7660" name="inst_AFC0973A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jt" x="100" y="7340" name="inst_B2EF4CCA" locked="0" code="" scaleX="17" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_climb_l" x="680" y="7280" name="inst_BA0D7802" locked="0" code="" scaleX="1" scaleY="22" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="200" y="7660" name="inst_5726AF02" locked="0" code="sprite_index=stone_walk_test_spr&#xA;&#xA;image_speed=0.2" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="260" y="7660" name="inst_99B88953" locked="0" code="sprite_index=stone_fly_spr" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="140" y="7580" name="inst_5BCB97CD" locked="0" code="sprite_index=pumpkin_idle_test_spr&#xA;image_speed=0.2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="200" y="7580" name="inst_BFDC8D6A" locked="0" code="sprite_index=pumpkin_walk_test_spr&#xA;&#xA;image_speed=0.3&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="260" y="7580" name="inst_7B9F3584" locked="0" code="sprite_index=pumpkin_fly_spr&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="140" y="7500" name="inst_DA473DAB" locked="0" code="sprite_index=foxford_idle_spr&#xA;&#xA;image_speed=0.2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="200" y="7500" name="inst_CA730BF7" locked="0" code="sprite_index=foxford_walk_spr&#xA;image_speed=0.2" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="260" y="7500" name="inst_03E15187" locked="0" code="sprite_index=fox_fly_spr&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="140" y="7420" name="inst_B97272AE" locked="0" code="sprite_index=yolo_stand_spr&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ani_tester" x="260" y="7420" name="inst_82AB9739" locked="0" code="sprite_index=yolo_fly_spr&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="700" y="7600" name="inst_AE9592AD" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="720" y="7760" name="inst_02422C59" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="800" y="7680" name="inst_C219798C" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
