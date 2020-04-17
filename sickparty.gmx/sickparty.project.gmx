@@ -256,6 +256,10 @@
         <sprite>sprites\wolf_head_spr</sprite>
         <sprite>sprites\flash_ball_spr</sprite>
       </sprites>
+      <sprites name="mad_cowgirl">
+        <sprite>sprites\cow_ribs_spr</sprite>
+        <sprite>sprites\mad_text_spr</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
     <sprite>sprites\type_small_font_spr</sprite>
@@ -359,6 +363,7 @@
     </backgrounds>
     <background>background\grey_trash</background>
     <background>background\TS_20</background>
+    <background>background\bama_BG</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -424,7 +429,7 @@
         </scripts>
       </scripts>
       <script>scripts\log.gml</script>
-	  <script>scripts\log_gmedit.gml</script>
+      <script>scripts\log_gmedit.gml</script>
       <script>scripts\dec_to_hex.gml</script>
       <script>scripts\hex_to_dec.gml</script>
       <script>scripts\bezier.gml</script>
@@ -647,8 +652,8 @@
     </objects>
     <objects name="camera">
       <object>objects\JB_cam</object>
-      <object>objects\UR_cam</object>
       <object>objects\R_ramp_finish</object>
+      <object>objects\UR_cam</object>
       <object>objects\R_lock</object>
       <object>objects\D_lock</object>
       <object>objects\checkpoint_obj</object>
@@ -697,6 +702,10 @@
       <object>objects\letter_seed</object>
       <object>objects\mast</object>
     </objects>
+    <objects name="mad_cow">
+      <object>objects\cow_train</object>
+      <object>objects\mad_text_drawer</object>
+    </objects>
     <object>objects\ball_40</object>
     <objects name="desire">
       <object>objects\desire_controller</object>
@@ -730,6 +739,7 @@
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\mad_cow_room</room>
       <room>rooms\big_eye_room</room>
       <room>rooms\orange_room</room>
       <room>rooms\desire_room</room>
