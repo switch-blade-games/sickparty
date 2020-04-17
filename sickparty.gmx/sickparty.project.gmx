@@ -65,10 +65,14 @@
     <sound>sound\skreet_snd</sound>
     <sound>sound\scifi_5_snd</sound>
     <sound>sound\rustle_3_snd</sound>
+    <sound>sound\flash_ball_snd</sound>
     <sound>sound\junk_1_snd</sound>
     <sound>sound\tube_snd</sound>
     <sound>sound\chimes_snd</sound>
+    <sound>sound\blue_heaven_snd</sound>
     <sound>sound\ricko_snd</sound>
+    <sound>sound\eye_loop_snd</sound>
+    <sound>sound\blow_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -240,6 +244,17 @@
         <sprite>sprites\honey_spr</sprite>
         <sprite>sprites\eric_spr</sprite>
         <sprite>sprites\eric_mask_spr</sprite>
+      </sprites>
+      <sprites name="big_eye">
+        <sprite>sprites\big_eye_spr</sprite>
+        <sprite>sprites\bow_spr</sprite>
+        <sprite>sprites\bow_mask_spr</sprite>
+        <sprite>sprites\brown_root_spr</sprite>
+        <sprite>sprites\big_vine_spr</sprite>
+        <sprite>sprites\blue_rect_spr</sprite>
+        <sprite>sprites\borch_spr</sprite>
+        <sprite>sprites\wolf_head_spr</sprite>
+        <sprite>sprites\flash_ball_spr</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
@@ -656,8 +671,9 @@
     </objects>
     <object>objects\view_grid</object>
     <objects name="hoards">
-      <object>objects\hoard_toggle</object>
       <object>objects\blank_hoard</object>
+      <object>objects\eye_hoard</object>
+      <object>objects\hoard_toggle</object>
       <object>objects\bab_hoard</object>
       <object>objects\pollack_hoard</object>
       <object>objects\beat_hoard</object>
@@ -702,11 +718,19 @@
       <object>objects\red_ball</object>
       <object>objects\eric</object>
     </objects>
+    <objects name="big_eye">
+      <object>objects\big_eye_controller</object>
+      <object>objects\bow</object>
+      <object>objects\big_vine</object>
+      <object>objects\wolf_head</object>
+      <object>objects\flash_ball</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\big_eye_room</room>
       <room>rooms\orange_room</room>
       <room>rooms\desire_room</room>
       <room>rooms\wheat_room</room>

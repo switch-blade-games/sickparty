@@ -8,6 +8,8 @@ surface_set_target(argument0)
         draw_clear_alpha(c_white,0)
         
         
+        
+        
         if(FILL=true){
         draw_set_color(argument1)
         
@@ -15,6 +17,7 @@ surface_set_target(argument0)
         
         draw_set_color(c_white)
         }
+        
         
         
         //if any of the SPRbg slots are used, draw them
