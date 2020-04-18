@@ -5,5 +5,5 @@ if !surface_exists(argument0)
     }
  else
     {
-       draw_surface(argument0,0,0);
+       draw_surface(argument0,view_xview[0],view_yview[0]);
     }

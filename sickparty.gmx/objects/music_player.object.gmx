@@ -53,9 +53,16 @@ MC_4_create(-1,40,180,0,0.3)
 }
 
 if(room=big_eye_room){
-MC_1_create(eye_loop_snd,40,180,audio_sound_length(eye_loop_snd),0.3)
+MC_1_create(eye_loop_snd,40,40,audio_sound_length(eye_loop_snd),0.3)
 MC_2_create(blow_snd,20,20,audio_sound_length(blow_snd),0.4)
 MC_3_create(blue_heaven_snd,20,40,audio_sound_length(blue_heaven_snd),0.5)
+MC_4_create(-1,40,180,0,0.3)
+}
+
+if(room=mushroom_forest){
+MC_1_create(mushroom_forest_snd,1000,1000,audio_sound_length(mushroom_forest_snd),0)
+MC_2_create(bell_snd,100,600,600,0.4)
+MC_3_create(-1,20,40,audio_sound_length(blue_heaven_snd),0.5)
 MC_4_create(-1,40,180,0,0.3)
 }
 </string>

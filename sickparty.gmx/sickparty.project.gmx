@@ -72,7 +72,13 @@
     <sound>sound\blue_heaven_snd</sound>
     <sound>sound\ricko_snd</sound>
     <sound>sound\eye_loop_snd</sound>
+    <sound>sound\bell_snd</sound>
     <sound>sound\blow_snd</sound>
+    <sound>sound\mushroom_forest_snd</sound>
+    <sound>sound\lens_die_snd</sound>
+    <sound>sound\flower_snd</sound>
+    <sound>sound\flower_die_snd</sound>
+    <sound>sound\flower_throw_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -260,6 +266,12 @@
         <sprite>sprites\cow_ribs_spr</sprite>
         <sprite>sprites\mad_text_spr</sprite>
       </sprites>
+      <sprites name="red_scream">
+        <sprite>sprites\red_horn_spr</sprite>
+        <sprite>sprites\red_hoard_1_spr</sprite>
+        <sprite>sprites\red_hoard_2_spr</sprite>
+        <sprite>sprites\red_hoard_3_spr</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
     <sprite>sprites\type_small_font_spr</sprite>
@@ -350,6 +362,14 @@
     <sprite>sprites\letter_seed_spr</sprite>
     <sprite>sprites\mast_spr</sprite>
     <sprite>sprites\explode_black_spr</sprite>
+    <sprites name="msuhroom_forset">
+      <sprite>sprites\BG_plant_spr</sprite>
+      <sprite>sprites\mushroom_floor_spr</sprite>
+      <sprite>sprites\mushroom_spr</sprite>
+      <sprite>sprites\lens_run_spr</sprite>
+      <sprite>sprites\mush_plat_spr</sprite>
+      <sprite>sprites\flower_tower_spr</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="REDACTED">
@@ -521,8 +541,8 @@
   </shaders>
   <objects name="objects">
     <object>objects\text_drawer</object>
-    <object>objects\music_player</object>
     <object>objects\title_drawer</object>
+    <object>objects\music_player</object>
     <object>objects\bobble_base</object>
     <objects name="REDACTED">
       <objects name="000-Front End">
@@ -677,6 +697,7 @@
     <object>objects\view_grid</object>
     <objects name="hoards">
       <object>objects\blank_hoard</object>
+      <object>objects\red_hoard</object>
       <object>objects\eye_hoard</object>
       <object>objects\hoard_toggle</object>
       <object>objects\bab_hoard</object>
@@ -734,11 +755,27 @@
       <object>objects\wolf_head</object>
       <object>objects\flash_ball</object>
     </objects>
+    <objects name="red_scream">
+      <object>objects\red_scream_controller</object>
+    </objects>
+    <objects name="mushroom_forset">
+      <object>objects\mushroom_floor</object>
+      <object>objects\mushroom_controller</object>
+      <object>objects\mushroom</object>
+      <object>objects\BG_plant</object>
+      <object>objects\lens_man</object>
+      <object>objects\end_spawn</object>
+      <object>objects\mushroom_spawner</object>
+      <object>objects\flower_tower</object>
+      <object>objects\flower_ball</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\mushroom_forest</room>
+      <room>rooms\red_scream_room</room>
       <room>rooms\mad_cow_room</room>
       <room>rooms\big_eye_room</room>
       <room>rooms\orange_room</room>

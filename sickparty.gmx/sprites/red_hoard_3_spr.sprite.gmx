@@ -3,14 +3,14 @@
   <type>0</type>
   <xorig>10</xorig>
   <yorigin>10</yorigin>
-  <colkind>0</colkind>
+  <colkind>1</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>-1</sepmasks>
+  <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>5</bbox_left>
-  <bbox_right>15</bbox_right>
-  <bbox_top>6</bbox_top>
-  <bbox_bottom>13</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>19</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>19</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,6 +20,8 @@
   <width>20</width>
   <height>20</height>
   <frames>
-    <frame index="0">images\spr_bullet_0.png</frame>
+    <frame index="0">images\red_hoard_3_spr_0.png</frame>
+    <frame index="1">images\red_hoard_3_spr_1.png</frame>
+    <frame index="2">images\red_hoard_3_spr_2.png</frame>
   </frames>
 </sprite>
