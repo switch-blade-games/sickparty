@@ -79,6 +79,7 @@
     <sound>sound\flower_snd</sound>
     <sound>sound\flower_die_snd</sound>
     <sound>sound\flower_throw_snd</sound>
+    <sound>sound\tube_water_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -369,6 +370,8 @@
       <sprite>sprites\lens_run_spr</sprite>
       <sprite>sprites\mush_plat_spr</sprite>
       <sprite>sprites\flower_tower_spr</sprite>
+      <sprite>sprites\water_ant_spr</sprite>
+      <sprite>sprites\ship_spr</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -675,6 +678,7 @@
       <object>objects\R_ramp_finish</object>
       <object>objects\UR_cam</object>
       <object>objects\R_lock</object>
+      <object>objects\R_stop</object>
       <object>objects\D_lock</object>
       <object>objects\checkpoint_obj</object>
       <object>objects\enemy_L</object>
@@ -768,6 +772,9 @@
       <object>objects\mushroom_spawner</object>
       <object>objects\flower_tower</object>
       <object>objects\flower_ball</object>
+      <object>objects\ship</object>
+      <object>objects\water_ant</object>
+      <object>objects\ship_trig</object>
     </objects>
   </objects>
   <rooms name="rooms">

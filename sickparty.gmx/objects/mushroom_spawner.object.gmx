@@ -78,7 +78,7 @@ MYenemy = lens_man;
           <argument>
             <kind>1</kind>
             <string>
-if (x &lt; view_xview[0]+400)
+if (x &gt; view_xview[0])
     ACTIVE = true;
 if (!ACTIVE) or (BUFFER)
     exit;
