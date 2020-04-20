@@ -31,7 +31,7 @@
 //3= MAX
 //4= PITCH (0=nothing, 1=max)
 
-MC_1_create(whale_snd,40,180,audio_sound_length(whale_snd),0.3)
+MC_1_create(-1,40,180,audio_sound_length(whale_snd),0.3)
 MC_2_create(-1,20,20,audio_sound_length(jungle_snd),0.4)
 MC_3_create(-1,20,40,180,0.5)
 MC_4_create(-1,40,180,0,0.3)
@@ -64,6 +64,21 @@ MC_1_create(mushroom_forest_snd,1000,1000,audio_sound_length(mushroom_forest_snd
 MC_2_create(bell_snd,100,600,600,0.4)
 MC_3_create(-1,20,40,audio_sound_length(blue_heaven_snd),0.5)
 MC_4_create(-1,40,180,0,0.3)
+}
+
+
+if(room=mad_cow_room){
+MC_1_create(glamp_snd,300,600,audio_sound_length(glamp_snd),0.8)
+MC_2_create(-1,20,120,600,0.8)
+MC_3_create(breaker_snd,200,1200,audio_sound_length(breaker_snd),0.8)
+MC_4_create(-1,600,600,audio_sound_length(jangle_snd),0.3)
+}
+
+if(room=stone_room){
+MC_1_create(wind_snd,300,600,audio_sound_length(wind_snd),0.3)
+MC_2_create(boiling_snd,300,1200,audio_sound_length(boiling_snd),0.4)
+MC_3_create(-1,200,1200,audio_sound_length(breaker_snd),0.8)
+MC_4_create(-1,600,600,audio_sound_length(jangle_snd),0.3)
 }
 </string>
           </argument>

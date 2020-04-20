@@ -80,6 +80,13 @@
     <sound>sound\flower_die_snd</sound>
     <sound>sound\flower_throw_snd</sound>
     <sound>sound\tube_water_snd</sound>
+    <sound>sound\glamp_snd</sound>
+    <sound>sound\clink_snd</sound>
+    <sound>sound\breaker_snd</sound>
+    <sound>sound\jangle_snd</sound>
+    <sound>sound\rooster_snd</sound>
+    <sound>sound\wind_snd</sound>
+    <sound>sound\boiling_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -266,12 +273,20 @@
       <sprites name="mad_cowgirl">
         <sprite>sprites\cow_ribs_spr</sprite>
         <sprite>sprites\mad_text_spr</sprite>
+        <sprite>sprites\rice_spr</sprite>
+        <sprite>sprites\rice_pile_spr</sprite>
+        <sprite>sprites\nagle_spr</sprite>
+        <sprite>sprites\rooster_spr</sprite>
       </sprites>
       <sprites name="red_scream">
         <sprite>sprites\red_horn_spr</sprite>
         <sprite>sprites\red_hoard_1_spr</sprite>
         <sprite>sprites\red_hoard_2_spr</sprite>
         <sprite>sprites\red_hoard_3_spr</sprite>
+      </sprites>
+      <sprites name="stone_place">
+        <sprite>sprites\stone_man_spr</sprite>
+        <sprite>sprites\green_sky_spr</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
@@ -387,6 +402,7 @@
     <background>background\grey_trash</background>
     <background>background\TS_20</background>
     <background>background\bama_BG</background>
+    <background>background\green_sky_BG</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -730,6 +746,10 @@
     <objects name="mad_cow">
       <object>objects\cow_train</object>
       <object>objects\mad_text_drawer</object>
+      <object>objects\rice_pile</object>
+      <object>objects\rice</object>
+      <object>objects\rooster</object>
+      <object>objects\nagle</object>
     </objects>
     <object>objects\ball_40</object>
     <objects name="desire">
@@ -776,14 +796,18 @@
       <object>objects\water_ant</object>
       <object>objects\ship_trig</object>
     </objects>
+    <objects name="stone_place">
+      <object>objects\stone_man</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\stone_room</room>
+      <room>rooms\mad_cow_room</room>
       <room>rooms\mushroom_forest</room>
       <room>rooms\red_scream_room</room>
-      <room>rooms\mad_cow_room</room>
       <room>rooms\big_eye_room</room>
       <room>rooms\orange_room</room>
       <room>rooms\desire_room</room>

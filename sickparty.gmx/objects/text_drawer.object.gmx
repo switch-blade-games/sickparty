@@ -146,9 +146,9 @@ draw_ransom(MYtext,20,40,360,100,100,true,50)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>snd_pitch(MYsnd,0.3)
+            <string>//snd_pitch(MYsnd,0.3)
 
-play_snd(MYsnd,false)
+//play_snd(MYsnd,false)
 
 
 CURRENTword-=1
@@ -206,9 +206,9 @@ repeat(string_length(MYtext)){
             <string>//argument0= sound
 //argument1= pitch variance
 
-snd_pitch(MYsnd,0.3)
+//snd_pitch(MYsnd,0.3)
 
-play_snd(MYsnd,false)
+//play_snd(MYsnd,false)
 
 CURRENTword+=1
 

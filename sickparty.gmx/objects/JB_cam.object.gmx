@@ -305,6 +305,8 @@ draw_set_halign(fa_left);
 draw_set_color(WHITE);
 draw_text(25,2,"="+string(global.P1LIVES));
 
+exit
+
 // weapons
 for(var i=0; i&lt;obj_player.weapons; i++;)
     {

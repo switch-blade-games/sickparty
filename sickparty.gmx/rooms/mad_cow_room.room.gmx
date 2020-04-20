@@ -109,6 +109,32 @@ instance_create(0,0,text_drawer)
     <instance objName="mad_text_drawer" x="3160" y="140" name="inst_AD95271D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="mad_text_drawer" x="3840" y="80" name="inst_AAC5A509" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="mad_text_drawer" x="3660" y="260" name="inst_C85684D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="0" y="180" name="inst_8E1618C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="80" y="180" name="inst_97535F2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="160" y="180" name="inst_F5F878DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="240" y="180" name="inst_E5E52F85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="320" y="180" name="inst_90A541B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="400" y="180" name="inst_46FD9932" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="480" y="180" name="inst_921E4E64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="560" y="180" name="inst_CA7D7380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="640" y="180" name="inst_BCC3921A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="720" y="180" name="inst_849E0870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="800" y="180" name="inst_823960A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="880" y="180" name="inst_86F4BFCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="960" y="180" name="inst_BF90C8B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="1040" y="180" name="inst_C8694539" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="1120" y="180" name="inst_0688975C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="1200" y="180" name="inst_B4CBF329" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="1280" y="180" name="inst_29379C7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="1360" y="180" name="inst_A2FB6871" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="1440" y="180" name="inst_E27FBA5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="1520" y="180" name="inst_4FF30919" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="rice_pile" x="1600" y="180" name="inst_F620CFA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="nagle" x="480" y="20" name="inst_B4C41A01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="nagle" x="680" y="20" name="inst_C36769D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="nagle" x="940" y="20" name="inst_A9D1BFB9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="nagle" x="1340" y="20" name="inst_9FFA0744" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="nagle" x="2040" y="20" name="inst_D7BD2249" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
