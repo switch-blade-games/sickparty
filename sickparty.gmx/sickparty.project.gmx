@@ -480,6 +480,8 @@
       <script>scripts\round_n.gml</script>
     </scripts>
     <scripts name="player">
+      <script>scripts\fsm_begin.gml</script>
+      <script>scripts\fsm_end.gml</script>
       <script>scripts\input.gml</script>
       <script>scripts\detect.gml</script>
       <script>scripts\apply_gravity.gml</script>

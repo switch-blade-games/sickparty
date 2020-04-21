@@ -346,10 +346,9 @@ switch(move_state)
                             {
                             var temp_mb = detect_mb_id;
                             
-                            var x1 = temp_mb.x+temp_mb.x1;
-                            var x2 = temp_mb.x+temp_mb.x2;
-                            var y1 = temp_mb.y+temp_mb.y1;
-                            var y2 = temp_mb.y+temp_mb.y2;
+                            var x1 = temp_mb.x+temp_mb.offx; var y1 = temp_mb.y+temp_mb.offy;
+                            var x2 = x1+lengthdir_x(temp_mb.len,temp_mb.dir);
+                            var y2 = y1+lengthdir_y(temp_mb.len,temp_mb.dir);
                             var len = temp_mb.len;
                             var amt = (x-min(x1,x2))/max(1,abs(x2-x1));
                             var yto = round(lerp(ternary(x1<x2,y1,y2),ternary(x1<x2,y2,y1),amt));
@@ -365,10 +364,11 @@ switch(move_state)
                             and (!place_meeting(x,yto+32,par_solid))
                                 {
                                 move_state = mState.mb;
-                                y = yto+32;
                                 mb_id = temp_mb;
                                 mb_offset = off;
                                 mb_sign = ternary(x1<x2,+1,-1);
+                                
+                                y = yto+32;
                                 xspeed = 0;
                                 yspeed = 0;
                                 }

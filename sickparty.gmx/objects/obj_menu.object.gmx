@@ -130,14 +130,14 @@ switch(menu)
                 instance_create(0,0,obj_control);
                 room_goto_next();
                 }
-            else if (select_y == 2)
+            else if (select_y == 1)
                 menu = 2;
-            else if (select_y == 3)
+            else if (select_y == 2)
                 menu = 7;
             }
         
         sy_enable = true;
-        sy_max = 3;
+        sy_max = 2;
         break;
     
     case 2: // settings
@@ -476,7 +476,6 @@ switch(menu)
     case 1: // main menu
         var i = 0;
         draw_text_outline(mx,my+i++*18,"1P START");
-        draw_text_outline(mx,my+i++*18,"2P START");
         draw_text_outline(mx,my+i++*18,"OPTIONS");
         draw_text_outline(mx,my+i++*18,"QUIT TO DESKTOP");
         

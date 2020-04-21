@@ -27,12 +27,12 @@
             <kind>1</kind>
             <string>event_inherited();
 
-x1 = 0;
-y1 = 20;
-x2 = 40;
-y2 = 0;
+// (0,20) to (40,0)
+len = 46;
+dir = +26.57;
 
-event_user(0);
+offx = 0;
+offy = 20;
 </string>
           </argument>
         </arguments>

@@ -73,33 +73,43 @@ slot = -1;
 no_clip = false;
 move_state = mState.walk;
 on_ground = false;
-on_ramp = false;
 lock = false;
 drop = false;
 wait = 0;
-respawn_timer = 0;
-respawn_time = 180;
-respawn_flash = false;
-death_timer = 0;
-death_time = 120;
-flash_rate = 3; // higher = slower
 grace_jump = 0; // 6
+// ramps
+on_ramp = false;
 ramp_slope = 1;
+// wall climbing
 wc_side = tile_side.none;
 no_wc = false;
 no_wc_time = 0;
+// monkey bars
 mb_id = noone;
 mb_offset = 0;
 mb_offset_old = 0;
 mb_sign = 1;
 no_mb = false;
 no_mb_time = 0;
+// vehicles
 vehicle_id = noone;
 on_vehicle = false;
 mShake = 0;
 mShake_timer = 140;
+
+// death/respawn
+respawn_timer = 0;
+respawn_time = 180;
+respawn_flash = false;
+death_timer = 0;
+death_time = 120;
+flash_rate = 3; // higher = slower
+
+// SFX
 step_sfx = false;
 land_sfx = false;
+mb_land_sfx = false;
+vehicle_land_sfx = false;
 
 // player position/physics
 walk_speed = 2;
@@ -176,6 +186,9 @@ if (keyboard_check_pressed(vk_f3))
     anim_set_skin(skin_id);
     }
 
+// FSM begin
+fsm_begin();
+// FSM main
 input();
 detect();
 apply_gravity();
@@ -184,6 +197,8 @@ apply_force();
 collide();
 animate();
 live();
+// FSM end
+fsm_end();
 
 // weapon
 if (shoot_timer &gt; 0)

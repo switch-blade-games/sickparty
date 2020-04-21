@@ -26,11 +26,10 @@ switch(move_state)
             {
             if (detect_vehicle) and (vehicle_id == noone) and (y >= detect_vehicle_id.y-12) and (yspeed >= 0)
                 {
-                vehicle_id = detect_vehicle_id;
-                detect_vehicle_id.rider = id;
-                
                 move_state = mState.moto;
+                vehicle_id = detect_vehicle_id;
                 on_vehicle = true;
+                vehicle_land_sfx = true;
                 
                 y = detect_vehicle_id.y-12;
                 xspeed = 0;
@@ -42,10 +41,9 @@ switch(move_state)
                 {
                 var temp_mb = detect_mb_id;
                 
-                var x1 = temp_mb.x+temp_mb.x1;
-                var x2 = temp_mb.x+temp_mb.x2;
-                var y1 = temp_mb.y+temp_mb.y1;
-                var y2 = temp_mb.y+temp_mb.y2;
+                var x1 = temp_mb.x+temp_mb.offx; var y1 = temp_mb.y+temp_mb.offy;
+                var x2 = x1 + lengthdir_x(temp_mb.len,temp_mb.dir);
+                var y2 = y1 + lengthdir_y(temp_mb.len,temp_mb.dir);
                 var len = temp_mb.len;
                 var amt = (x-min(x1,x2))/max(1,abs(x2-x1));
                 var yto = round(lerp(ternary(x1<x2,y1,y2),ternary(x1<x2,y2,y1),amt));
@@ -56,15 +54,14 @@ switch(move_state)
                 and (yspeed > 0) and (can_mb) and (!place_meeting(x,yto+32,par_solid))
                     {
                     move_state = mState.mb;
-                    y = yto+32;
                     mb_id = temp_mb;
                     mb_offset = off;
                     mb_sign = ternary(x1<x2,+1,-1);
+                    mb_land_sfx = true;
+                    
+                    y = yto+32;
                     xspeed = 0;
                     yspeed = 0;
-                    
-                    // sfx
-                    snd_play(choose(snd_land_metal_1,snd_land_metal_2,snd_land_metal_3),0.1,0.2);
                     }
                 }
             if (yspeed < fall_speed)
@@ -84,10 +81,9 @@ switch(move_state)
             fall = true;
             
             // move to position
-            var x1 = mb_id.x+mb_id.x1;
-            var x2 = mb_id.x+mb_id.x2;
-            var y1 = mb_id.y+mb_id.y1;
-            var y2 = mb_id.y+mb_id.y2;
+            var x1 = mb_id.x+mb_id.offx; var y1 = mb_id.y+mb_id.offy;
+            var x2 = x1+lengthdir_x(mb_id.len,mb_id.dir);
+            var y2 = y1+lengthdir_y(mb_id.len,mb_id.dir);
             var ldx = lengthdir_x(mb_offset,mb_id.dir);
             var ldy = lengthdir_y(mb_offset,mb_id.dir);
             if (!place_meeting(round(x1+ldx),round(y1+ldy)+32,par_solid))
@@ -101,10 +97,9 @@ switch(move_state)
             var temp_mb = collision_line(x,y-28,x,y-40,par_mb,true,true);
             if (temp_mb != noone)
                 {
-                var x1 = temp_mb.x+temp_mb.x1;
-                var x2 = temp_mb.x+temp_mb.x2;
-                var y1 = temp_mb.y+temp_mb.y1;
-                var y2 = temp_mb.y+temp_mb.y2;
+                var x1 = temp_mb.x+temp_mb.offx; var y1 = temp_mb.y+temp_mb.offy;
+                var x2 = x1+lengthdir_x(temp_mb.len,temp_mb.dir);
+                var y2 = y1+lengthdir_y(temp_mb.len,temp_mb.dir);
                 var len = temp_mb.len;
                 var amt = (x-min(x1,x2))/max(1,abs(x2-x1));
                 var yto = round(lerp(ternary(x1<x2,y1,y2),ternary(x1<x2,y2,y1),amt));
@@ -115,12 +110,15 @@ switch(move_state)
                 and (can_mb) and (!place_meeting(x,yto+32,par_solid))
                     {
                     move_state = mState.mb;
-                    y = yto+32;
                     mb_id = temp_mb;
                     mb_offset = off;
                     mb_sign = ternary(x1<x2,+1,-1);
+                    mb_land_sfx = false;
+                    
+                    y = yto+32;
                     xspeed = 0;
                     yspeed = 0;
+                    
                     fall = false;
                     }
                 }
@@ -161,6 +159,7 @@ switch(move_state)
     case mState.moto:
         if (!instance_exists(vehicle_id))
             {
+            vehicle_id = noone;
             move_state = mState.walk;
             on_ground = false;
             break;
@@ -181,10 +180,9 @@ switch(move_state)
                 {
                 var temp_mb = detect_mb_id;
                 
-                var x1 = temp_mb.x+temp_mb.x1;
-                var x2 = temp_mb.x+temp_mb.x2;
-                var y1 = temp_mb.y+temp_mb.y1;
-                var y2 = temp_mb.y+temp_mb.y2;
+                var x1 = temp_mb.x+temp_mb.offx; var y1 = temp_mb.y+temp_mb.offy;
+                var x2 = x1+lengthdir_x(temp_mb.len,temp_mb.dir);
+                var y2 = y1+lengthdir_y(temp_mb.len,temp_mb.dir);
                 var len = temp_mb.len;
                 var amt = (x-min(x1,x2))/max(1,abs(x2-x1));
                 var yto = round(lerp(ternary(x1<x2,y1,y2),ternary(x1<x2,y2,y1),amt));
@@ -195,19 +193,17 @@ switch(move_state)
                 and (yspeed > 0) and (can_mb) and (!place_meeting(x,yto+32,par_solid))
                     {
                     move_state = mState.mb;
-                    y = yto+32;
                     mb_id = temp_mb;
                     mb_offset = off;
                     mb_sign = ternary(x1<x2,+1,-1);
+                    mb_land_sfx = true;
+                    
+                    y = yto+32;
                     xspeed = 0;
                     yspeed = 0;
                     
-                    vehicle_id.rider = noone;
                     vehicle_id = noone;
                     on_vehicle = false;
-                    
-                    // sfx
-                    snd_play(choose(snd_land_metal_1,snd_land_metal_2,snd_land_metal_3),0.1,0.2);
                     }
                 }
             if (yspeed < fall_speed)
