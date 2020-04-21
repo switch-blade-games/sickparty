@@ -226,6 +226,8 @@
       <sprites name="bug">
         <sprite>sprites\bug_body_spr</sprite>
         <sprite>sprites\bug_leg_spr</sprite>
+        <sprite>sprites\bug_base_spr</sprite>
+        <sprite>sprites\bug_segment_spr</sprite>
       </sprites>
       <sprites name="wheat">
         <sprite>sprites\wheat_ball_spr</sprite>
