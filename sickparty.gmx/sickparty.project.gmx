@@ -93,6 +93,8 @@
     <sound>sound\brick_crackle_snd</sound>
     <sound>sound\crackle_2_snd</sound>
     <sound>sound\orb_shot_snd</sound>
+    <sound>sound\cater_snd</sound>
+    <sound>sound\bug_hit_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -221,6 +223,9 @@
         <sprite>sprites\bug_base_spr</sprite>
         <sprite>sprites\bug_segment_spr</sprite>
         <sprite>sprites\brick_fly_spr</sprite>
+        <sprite>sprites\cat_ball_spr</sprite>
+        <sprite>sprites\cat_bod_spr</sprite>
+        <sprite>sprites\leaf_plat_spr</sprite>
       </sprites>
       <sprites name="wheat">
         <sprite>sprites\wheat_ball_spr</sprite>
@@ -399,7 +404,9 @@
     <background>background\bama_BG</background>
     <background>background\green_sky_BG</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\cater_path</path>
+  </paths>
   <scripts name="scripts">
     <scripts name="core">
       <scripts name="input">
@@ -510,47 +517,59 @@
     <scripts name="JB_scripts">
       <script>scripts\outside_view.gml</script>
       <script>scripts\enemy_hit.gml</script>
-      <script>scripts\blend_normal.gml</script>
-      <script>scripts\blend_sub.gml</script>
-      <script>scripts\random_col_set.gml</script>
-      <script>scripts\blend_zero.gml</script>
-      <script>scripts\Yfollow.gml</script>
-      <script>scripts\Rfollow.gml</script>
-      <script>scripts\checkpoint_check.gml</script>
+      <scripts name="camera / checkpoints">
+        <script>scripts\checkpoint_check.gml</script>
+        <script>scripts\Rfollow.gml</script>
+        <script>scripts\Yfollow.gml</script>
+      </scripts>
       <scripts name="bug">
         <script>scripts\bug_orb_list.gml</script>
+        <script>scripts\bug_crackle.gml</script>
       </scripts>
-      <script>scripts\cactus_start.gml</script>
-      <script>scripts\cactus_draw.gml</script>
-      <script>scripts\draw_ransom.gml</script>
-      <script>scripts\random_font_med.gml</script>
-      <script>scripts\random_font_large.gml</script>
-      <script>scripts\random_font_small.gml</script>
+      <scripts name="tail">
+        <script>scripts\tail_create.gml</script>
+        <script>scripts\tail_step.gml</script>
+        <script>scripts\tail_destroy.gml</script>
+      </scripts>
+      <scripts name="fonts / text">
+        <script>scripts\draw_ransom.gml</script>
+        <script>scripts\random_font_med.gml</script>
+        <script>scripts\random_font_large.gml</script>
+        <script>scripts\random_font_small.gml</script>
+        <script>scripts\random_text_color.gml</script>
+      </scripts>
+      <scripts name="drawing / hoards">
+        <script>scripts\cactus_start.gml</script>
+        <script>scripts\cactus_draw.gml</script>
+        <script>scripts\blend_zero.gml</script>
+        <script>scripts\random_col_set.gml</script>
+        <script>scripts\blend_sub.gml</script>
+        <script>scripts\blend_normal.gml</script>
+        <script>scripts\random_color.gml</script>
+        <script>scripts\hoard_draw.gml</script>
+        <script>scripts\hoard_init.gml</script>
+        <script>scripts\hoard_step.gml</script>
+        <script>scripts\cut_create.gml</script>
+        <script>scripts\cut_draw.gml</script>
+        <script>scripts\toggle_push.gml</script>
+      </scripts>
+      <scripts name="audio">
+        <script>scripts\play_snd.gml</script>
+        <script>scripts\snd_pitch.gml</script>
+        <script>scripts\MC_1_create.gml</script>
+        <script>scripts\MC_1_step.gml</script>
+        <script>scripts\MC_2_create.gml</script>
+        <script>scripts\MC_2_step.gml</script>
+        <script>scripts\MC_3_create.gml</script>
+        <script>scripts\MC_3_step.gml</script>
+        <script>scripts\MC_4_create.gml</script>
+        <script>scripts\MC_4_step.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\camera_deactivate.gml</script>
+    <script>scripts\draw_UI.gml</script>
     <script>scripts\room_init.gml</script>
     <script>scripts\clear_array.gml</script>
-    <script>scripts\draw_UI.gml</script>
-    <script>scripts\hoard_draw.gml</script>
-    <script>scripts\hoard_init.gml</script>
-    <script>scripts\hoard_step.gml</script>
-    <script>scripts\play_snd.gml</script>
-    <script>scripts\random_color.gml</script>
-    <script>scripts\random_text_color.gml</script>
-    <script>scripts\set_colors.gml</script>
-    <script>scripts\snd_pitch.gml</script>
-    <script>scripts\sur_check.gml</script>
-    <script>scripts\toggle_push.gml</script>
-    <script>scripts\cut_create.gml</script>
-    <script>scripts\cut_draw.gml</script>
-    <script>scripts\MC_1_create.gml</script>
-    <script>scripts\MC_1_step.gml</script>
-    <script>scripts\MC_2_create.gml</script>
-    <script>scripts\MC_2_step.gml</script>
-    <script>scripts\MC_3_create.gml</script>
-    <script>scripts\MC_3_step.gml</script>
-    <script>scripts\MC_4_create.gml</script>
-    <script>scripts\MC_4_step.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_grayscale.shader</shader>
@@ -719,6 +738,8 @@
       <object>objects\bug_top</object>
       <object>objects\bug_seg_rig</object>
       <object>objects\brick_fly</object>
+      <object>objects\cater_head</object>
+      <object>objects\cater_body</object>
     </objects>
     <object>objects\view_grid</object>
     <objects name="hoards">

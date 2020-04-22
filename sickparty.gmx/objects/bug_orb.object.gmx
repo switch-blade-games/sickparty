@@ -41,7 +41,7 @@ ANG=random(360)
 
 var DIR=-1;
 
-spe=1.2
+spe=2
 
 if(instance_number(bug_base)=1){
 

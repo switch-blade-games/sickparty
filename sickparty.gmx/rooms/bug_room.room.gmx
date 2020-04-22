@@ -72,6 +72,10 @@ instance_create(0,0,bug_controller)
     <instance objName="obj_jt" x="180" y="140" name="inst_14114B41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jt" x="200" y="140" name="inst_CC5596EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jt" x="220" y="140" name="inst_613BE23F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_jt" x="140" y="140" name="inst_FF4447CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_jt" x="240" y="140" name="inst_83864AC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_jt" x="120" y="140" name="inst_AE5763F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_jt" x="260" y="140" name="inst_221343A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="grey_trash" x="0" y="240" w="20" h="20" xo="80" yo="40" id="10000255" name="inst_A361CCA0" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -122,9 +126,6 @@ instance_create(0,0,bug_controller)
     <tile bgName="grey_trash" x="280" y="160" w="20" h="20" xo="40" yo="220" id="10000314" name="inst_2806F58A" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="grey_trash" x="280" y="140" w="20" h="20" xo="20" yo="180" id="10000315" name="inst_76B29F7B" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="grey_trash" x="260" y="180" w="20" h="20" xo="20" yo="180" id="10000316" name="inst_1B03BCC4" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grey_trash" x="380" y="40" w="20" h="20" xo="40" yo="180" id="10000317" name="inst_96BE40C8" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grey_trash" x="360" y="40" w="20" h="20" xo="40" yo="180" id="10000318" name="inst_BBCE0091" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="grey_trash" x="340" y="40" w="20" h="20" xo="0" yo="200" id="10000319" name="inst_34739DE8" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="grey_trash" x="120" y="240" w="20" h="20" xo="20" yo="20" id="10000320" name="inst_E3E6D43E" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="grey_trash" x="220" y="240" w="20" h="20" xo="20" yo="20" id="10000321" name="inst_0559E023" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="grey_trash" x="240" y="220" w="20" h="20" xo="20" yo="20" id="10000322" name="inst_A26F0880" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

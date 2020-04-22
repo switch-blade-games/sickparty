@@ -89,9 +89,27 @@ if(TOP=true)
             <string>if(BUFFER=true)
 exit
 
+
+var MAKEbrick=false;
+
+var BRICKdive=false;
+
 if not(y=yprevious)
-if(random(10)&lt;1)
-instance_create(x-random(10)+random(10),y-random(10)+random(10),brick_fly)
+MAKEbrick=true
+
+if not(x=xprevious){
+
+MAKEbrick=true
+BRICKdive=true
+}
+
+
+if(MAKEbrick=true)
+if(random(10)&lt;1){
+var BRICKson=instance_create(x-random(20)+random(20),y+40-random(10)+random(10),brick_fly);
+
+BRICKson.DIVE=BRICKdive
+}
 
 
 if(instance_number(SON)=1){

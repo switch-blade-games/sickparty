@@ -106,6 +106,37 @@ MOVE=false
 MOVEspe=0.5
 
 
+CATrate=180
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(MOVE=false)
+exit
+
+instance_create(x,y-20,cater_head)
+
+alarm[4]=CATrate
 </string>
           </argument>
         </arguments>
@@ -143,6 +174,11 @@ motion_set(0,MOVEspe)
 
 if(side=LEFT)
 motion_set(180,MOVEspe)
+
+
+instance_create(x,y-20,cater_head)
+
+alarm[4]=CATrate
 </string>
           </argument>
         </arguments>
@@ -286,15 +322,7 @@ repeat(NUM){
 
 if(EXstate=UP){
 
-    if(random(CRACKLEodds)&lt;1){
-        play_snd(brick_crackle_snd,false)
-        snd_pitch(brick_crackle_snd,0.3)
-    }
-
-    if(random(CRACKLEodds)&lt;1){
-        play_snd(crackle_2_snd,false)
-        snd_pitch(crackle_2_snd,0.3)
-    }
+    bug_crackle()
     
     extend+=EXspe
     
@@ -313,15 +341,7 @@ if(EXstate=DOWN){
 
     extend-=EXspe
     
-    if(random(CRACKLEodds)&lt;1){
-        play_snd(brick_crackle_snd,false)
-        snd_pitch(brick_crackle_snd,0.3)
-    }
-    
-    if(random(CRACKLEodds)&lt;1){
-        play_snd(crackle_2_snd,false)
-        snd_pitch(crackle_2_snd,0.3)
-    }
+    bug_crackle()
     
     if(extend&lt;=0){
         extend=0
@@ -332,6 +352,8 @@ if(EXstate=DOWN){
 
 
 if(MOVE=true){
+
+bug_crackle()
 
     if(side=RIGHT)
     if(x&gt;=global.BUGx+370){
@@ -378,7 +400,7 @@ if(MOVE=true){
 
 draw_text(x,y,EXstate)
 
-
+exit
 repeat(8){
 
     draw_sprite_ext(bug_leg_spr,-1,x+random(20)-random(20),y+10,1,1,random(360),c_white,1)
