@@ -115,7 +115,7 @@ repeat(string_length(MYtext)){
 
 //MYtext="I feel...G...O...O...D"
 
-exit
+
 draw_ransom(MYtext,14,40,360,100,100,true,50)
 
 

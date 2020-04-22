@@ -35,12 +35,12 @@ SPR2=large_soup_spr
 SPR3=small_soup_spr
 
 SPR1num=60
-SPR2num=40
-SPR3num=40
+SPR2num=60
+SPR3num=60
 
-SPR1time=8
-SPR2time=7
-SPR3time=6
+SPR1time=20
+SPR2time=20
+SPR3time=20
 
 //argument0 = "background" sprite 1, etc
 hoard_init(-1,-1,-1,1)

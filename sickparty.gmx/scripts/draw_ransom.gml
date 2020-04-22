@@ -132,3 +132,5 @@ repeat(LEN){
     
 }
 
+draw_set_font(global.fnt_joystix)
+

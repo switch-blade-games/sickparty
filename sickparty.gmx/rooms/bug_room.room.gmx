@@ -3,7 +3,7 @@
   <caption></caption>
   <width>400</width>
   <height>240</height>
-  <vsnap>20</vsnap>
+  <vsnap>10</vsnap>
   <hsnap>20</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
@@ -14,7 +14,13 @@
 
 background_color=DARKpurple
 
-instance_create(0,0,beat_hoard)
+instance_create(0,0,music_player)
+
+instance_create(0,0,bug_controller)
+
+//instance_create(0,0,random_hoard)
+
+//instance_create(0,0,beat_hoard)
 
 //instance_create(0,0,view_grid)</code>
   <enableViews>-1</enableViews>
@@ -61,13 +67,11 @@ instance_create(0,0,beat_hoard)
     <instance objName="obj_wall" x="400" y="-60" name="inst_FB85D1B8" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-20" y="-60" name="inst_BE6EE395" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-20" y="-80" name="inst_5BEF045A" locked="0" code="" scaleX="22" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="40" y="120" name="inst_43024FC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bug_base" x="360" y="200" name="inst_55608D13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="180" y="70" name="inst_43024FC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jt" x="160" y="140" name="inst_8D965C9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jt" x="180" y="140" name="inst_14114B41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jt" x="200" y="140" name="inst_CC5596EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jt" x="220" y="140" name="inst_613BE23F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bobble_base" x="120" y="60" name="inst_04E2608F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="grey_trash" x="0" y="240" w="20" h="20" xo="80" yo="40" id="10000255" name="inst_A361CCA0" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

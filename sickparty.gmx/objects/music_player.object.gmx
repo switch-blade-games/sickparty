@@ -80,6 +80,13 @@ MC_2_create(boiling_snd,300,1200,audio_sound_length(boiling_snd),0.4)
 MC_3_create(-1,200,1200,audio_sound_length(breaker_snd),0.8)
 MC_4_create(-1,600,600,audio_sound_length(jangle_snd),0.3)
 }
+
+if(room=bug_room){
+MC_1_create(cool_synth_snd,100,200,audio_sound_length(cool_synth_snd),0.3)
+MC_2_create(-1,1000,2000,audio_sound_length(cool_synth_2_snd),0.1)
+MC_3_create(-1,200,1200,audio_sound_length(hi_hat_snd),0.8)
+MC_4_create(-1,600,600,audio_sound_length(jangle_snd),0.3)
+}
 </string>
           </argument>
         </arguments>

@@ -31,9 +31,9 @@ SPR1=beat_BG_spr
 SPR2=beat_horde_spr
 SPR3=beat_horde_spr
 
-SPR1num=60
-SPR2num=60
-SPR3num=60
+SPR1num=10
+SPR2num=10
+SPR3num=10
 
 SPR1time=20
 SPR2time=10

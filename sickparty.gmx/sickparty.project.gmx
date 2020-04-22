@@ -87,37 +87,16 @@
     <sound>sound\rooster_snd</sound>
     <sound>sound\wind_snd</sound>
     <sound>sound\boiling_snd</sound>
+    <sound>sound\cool_synth_snd</sound>
+    <sound>sound\cool_synth_2_snd</sound>
+    <sound>sound\hi_hat_snd</sound>
+    <sound>sound\brick_crackle_snd</sound>
+    <sound>sound\crackle_2_snd</sound>
+    <sound>sound\orb_shot_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
       <sprites name="000-Front End">
-        <sprites name="engine">
-          <sprite>sprites\joystix_font_spr</sprite>
-          <sprite>sprites\node_spr</sprite>
-          <sprite>sprites\msk_particle</sprite>
-          <sprite>sprites\spr_particle</sprite>
-          <sprites name="colliders">
-            <sprite>sprites\msk_wall</sprite>
-            <sprite>sprites\msk_jt</sprite>
-            <sprite>sprites\msk_ramp_half_r</sprite>
-            <sprite>sprites\msk_ramp_half_l</sprite>
-            <sprite>sprites\msk_mb</sprite>
-            <sprite>sprites\msk_mb_r</sprite>
-            <sprite>sprites\msk_mb_l</sprite>
-            <sprite>sprites\msk_trigger</sprite>
-            <sprite>sprites\spr_wall_move</sprite>
-          </sprites>
-          <sprites name="gamepad">
-            <sprite>sprites\spr_buttons_xbox</sprite>
-            <sprite>sprites\spr_buttons_ps</sprite>
-          </sprites>
-          <sprites name="editor">
-            <sprite>sprites\spr_player_spawn</sprite>
-            <sprite>sprites\spr_camera</sprite>
-            <sprite>sprites\spr_camera_arrow</sprite>
-            <sprite>sprites\spr_arrow_h</sprite>
-          </sprites>
-        </sprites>
         <sprites name="title">
           <sprite>sprites\title_crew_spr</sprite>
           <sprite>sprites\nigz_text_spr</sprite>
@@ -131,15 +110,32 @@
       <sprites name="100-Characters">
         <sprite>sprites\msk_player</sprite>
         <sprite>sprites\msk_player_duck</sprite>
-        <sprite>sprites\spr_guns</sprite>
-        <sprites name="102-Yolo">
-          <sprites name="flying">
-            <sprite>sprites\yolo_fly_spr</sprite>
-            <sprite>sprites\yolo_shot_spr</sprite>
-          </sprites>
-          <sprites name="moto">
-            <sprite>sprites\yolo_vehicle_moto_spr</sprite>
-          </sprites>
+      </sprites>
+      <sprites name="engine">
+        <sprite>sprites\joystix_font_spr</sprite>
+        <sprite>sprites\node_spr</sprite>
+        <sprite>sprites\msk_particle</sprite>
+        <sprite>sprites\spr_particle</sprite>
+        <sprites name="colliders">
+          <sprite>sprites\msk_wall</sprite>
+          <sprite>sprites\msk_jt</sprite>
+          <sprite>sprites\msk_ramp_half_r</sprite>
+          <sprite>sprites\msk_ramp_half_l</sprite>
+          <sprite>sprites\msk_mb</sprite>
+          <sprite>sprites\msk_mb_r</sprite>
+          <sprite>sprites\msk_mb_l</sprite>
+          <sprite>sprites\msk_trigger</sprite>
+          <sprite>sprites\spr_wall_move</sprite>
+        </sprites>
+        <sprites name="gamepad">
+          <sprite>sprites\spr_buttons_xbox</sprite>
+          <sprite>sprites\spr_buttons_ps</sprite>
+        </sprites>
+        <sprites name="editor">
+          <sprite>sprites\spr_player_spawn</sprite>
+          <sprite>sprites\spr_camera</sprite>
+          <sprite>sprites\spr_camera_arrow</sprite>
+          <sprite>sprites\spr_arrow_h</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -164,10 +160,6 @@
       <sprite>sprites\death_block_spr</sprite>
       <sprite>sprites\block_break_spr</sprite>
       <sprite>sprites\text_platform_mask_spr</sprite>
-    </sprites>
-    <sprites name="powerups">
-      <sprite>sprites\red_pill_spr</sprite>
-      <sprite>sprites\c_powerup_spr</sprite>
     </sprites>
     <sprites name="projectiles">
       <sprite>sprites\spr_bullet</sprite>
@@ -224,10 +216,11 @@
     <sprite>sprites\lady_stand_spr</sprite>
     <sprites name="bosses">
       <sprites name="bug">
-        <sprite>sprites\bug_body_spr</sprite>
+        <sprite>sprites\bug_top_spr</sprite>
         <sprite>sprites\bug_leg_spr</sprite>
         <sprite>sprites\bug_base_spr</sprite>
         <sprite>sprites\bug_segment_spr</sprite>
+        <sprite>sprites\brick_fly_spr</sprite>
       </sprites>
       <sprites name="wheat">
         <sprite>sprites\wheat_ball_spr</sprite>
@@ -479,6 +472,7 @@
       <script>scripts\ternary.gml</script>
       <script>scripts\reflect.gml</script>
       <script>scripts\line_line_collision.gml</script>
+      <script>scripts\word_hoard.gml</script>
       <script>scripts\round_n.gml</script>
     </scripts>
     <scripts name="player">
@@ -523,28 +517,30 @@
       <script>scripts\Yfollow.gml</script>
       <script>scripts\Rfollow.gml</script>
       <script>scripts\checkpoint_check.gml</script>
+      <scripts name="bug">
+        <script>scripts\bug_orb_list.gml</script>
+      </scripts>
+      <script>scripts\cactus_start.gml</script>
+      <script>scripts\cactus_draw.gml</script>
+      <script>scripts\draw_ransom.gml</script>
+      <script>scripts\random_font_med.gml</script>
+      <script>scripts\random_font_large.gml</script>
+      <script>scripts\random_font_small.gml</script>
     </scripts>
     <script>scripts\camera_deactivate.gml</script>
     <script>scripts\room_init.gml</script>
-    <script>scripts\cactus_start.gml</script>
-    <script>scripts\cactus_draw.gml</script>
     <script>scripts\clear_array.gml</script>
-    <script>scripts\draw_ransom.gml</script>
     <script>scripts\draw_UI.gml</script>
     <script>scripts\hoard_draw.gml</script>
     <script>scripts\hoard_init.gml</script>
     <script>scripts\hoard_step.gml</script>
     <script>scripts\play_snd.gml</script>
     <script>scripts\random_color.gml</script>
-    <script>scripts\random_font_large.gml</script>
-    <script>scripts\random_font_med.gml</script>
-    <script>scripts\random_font_small.gml</script>
     <script>scripts\random_text_color.gml</script>
     <script>scripts\set_colors.gml</script>
     <script>scripts\snd_pitch.gml</script>
     <script>scripts\sur_check.gml</script>
     <script>scripts\toggle_push.gml</script>
-    <script>scripts\word_hoard.gml</script>
     <script>scripts\cut_create.gml</script>
     <script>scripts\cut_draw.gml</script>
     <script>scripts\MC_1_create.gml</script>
@@ -716,7 +712,13 @@
     <object>objects\obj_shader</object>
     <object>objects\obj_player</object>
     <objects name="bug">
+      <object>objects\bug_controller</object>
+      <object>objects\bug_orb</object>
       <object>objects\bug_base</object>
+      <object>objects\bug_segment</object>
+      <object>objects\bug_top</object>
+      <object>objects\bug_seg_rig</object>
+      <object>objects\brick_fly</object>
     </objects>
     <object>objects\view_grid</object>
     <objects name="hoards">
@@ -808,15 +810,15 @@
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
-      <room>rooms\stone_room</room>
+      <room>rooms\bug_room</room>
       <room>rooms\mad_cow_room</room>
+      <room>rooms\stone_room</room>
       <room>rooms\mushroom_forest</room>
       <room>rooms\red_scream_room</room>
       <room>rooms\big_eye_room</room>
       <room>rooms\orange_room</room>
       <room>rooms\desire_room</room>
       <room>rooms\wheat_room</room>
-      <room>rooms\bug_room</room>
       <room>rooms\dream_room</room>
       <room>rooms\black_room</room>
       <rooms name="demo_rooms">
