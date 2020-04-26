@@ -826,11 +826,13 @@
     <objects name="stone_place">
       <object>objects\stone_man</object>
     </objects>
+    <object>objects\obj_smith_visuals</object>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\rm_smith_visuals</room>
       <room>rooms\bug_room</room>
       <room>rooms\mad_cow_room</room>
       <room>rooms\stone_room</room>
