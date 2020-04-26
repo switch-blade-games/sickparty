@@ -863,12 +863,9 @@
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
-<<<<<<< HEAD
       <room>rooms\servo_room</room>
       <room>rooms\dream_room</room>
-=======
       <room>rooms\rm_smith_visuals</room>
->>>>>>> 0fcdcdcd4ab62378fcfb9c8457e598ddadd506c2
       <room>rooms\bug_room</room>
       <room>rooms\mad_cow_room</room>
       <room>rooms\stone_room</room>
