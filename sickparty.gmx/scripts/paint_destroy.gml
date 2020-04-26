@@ -1,0 +1,5 @@
+surface_free(SURout)
+surface_free(SURmask)
+surface_free(SURfill)
+surface_free(PAINTsur)
+surface_free(WHITEsur)

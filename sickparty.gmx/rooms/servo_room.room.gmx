@@ -112,9 +112,6 @@ instance_create(0,0,servo_controller)
     <instance objName="obj_mb" x="360" y="40" name="inst_E789FCAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mb" x="380" y="40" name="inst_55E3772D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="20" name="inst_4B1E19B5" locked="0" code="" scaleX="20" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cake_maker" x="440" y="100" name="inst_ED80EB81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cake_maker" x="440" y="150" name="inst_3B3DD8A4" locked="0" code="MYid=2" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fly_man" x="340" y="170" name="inst_77C5963B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_reflector" x="0" y="20" name="inst_79D6AD5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_reflector" x="20" y="20" name="inst_09B8A63F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_reflector" x="40" y="20" name="inst_0D65E79D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -175,6 +172,9 @@ instance_create(0,0,servo_controller)
     <instance objName="obj_reflector" x="-20" y="20" name="inst_AAB38DE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_reflector" x="-20" y="200" name="inst_2F6E21D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_reflector" x="400" y="200" name="inst_67EC9326" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cake_maker" x="460" y="80" name="inst_C66FE51E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cake_maker" x="460" y="170" name="inst_9F9A179E" locked="0" code="MYid=2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pre_patrick" x="360" y="120" name="inst_34668C92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

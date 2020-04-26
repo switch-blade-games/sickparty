@@ -299,6 +299,18 @@
         <sprite>sprites\coco_cake_spr</sprite>
         <sprite>sprites\fly_man_spr</sprite>
         <sprite>sprites\dazzle_spr</sprite>
+        <sprite>sprites\patrick_spr</sprite>
+        <sprite>sprites\bob_spr</sprite>
+        <sprite>sprites\virus_ball_spr</sprite>
+        <sprite>sprites\ceiling_beetle_spr</sprite>
+        <sprite>sprites\ballot_spr</sprite>
+        <sprite>sprites\eagle_head_spr</sprite>
+        <sprite>sprites\eagle_body_spr</sprite>
+        <sprite>sprites\eagle_snake_tail_spr</sprite>
+        <sprite>sprites\tidal_frame_spr</sprite>
+        <sprite>sprites\frame_flash_spr</sprite>
+        <sprite>sprites\frame_hit_spr</sprite>
+        <sprite>sprites\black_canvas_spr</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
@@ -387,6 +399,9 @@
       <sprite>sprites\shnab_text_spr</sprite>
       <sprite>sprites\abstract_ticker_spr</sprite>
       <sprite>sprites\goop_spr</sprite>
+      <sprite>sprites\paint_2_spr</sprite>
+      <sprite>sprites\paint_3_spr</sprite>
+      <sprite>sprites\paint_1_spr</sprite>
     </sprites>
     <sprite>sprites\mast_spr</sprite>
     <sprite>sprites\explode_black_spr</sprite>
@@ -418,6 +433,7 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\cater_path</path>
+    <path>paths\eagle_snake_path</path>
   </paths>
   <scripts name="scripts">
     <scripts name="core">
@@ -577,11 +593,20 @@
         <script>scripts\MC_4_create.gml</script>
         <script>scripts\MC_4_step.gml</script>
       </scripts>
+      <scripts name="ds_grid">
+        <script>scripts\ds_grid_placer.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\camera_deactivate.gml</script>
     <script>scripts\draw_UI.gml</script>
     <script>scripts\room_init.gml</script>
     <script>scripts\clear_array.gml</script>
+    <scripts name="painter">
+      <script>scripts\paint_create.gml</script>
+      <script>scripts\paint_step.gml</script>
+      <script>scripts\paint_draw.gml</script>
+      <script>scripts\paint_destroy.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_grayscale.shader</shader>
@@ -806,15 +831,23 @@
       </objects>
       <objects name="servo">
         <object>objects\servo_controller</object>
+        <object>objects\patrick</object>
         <object>objects\servo</object>
         <object>objects\green_light</object>
         <object>objects\red_light</object>
         <object>objects\crimson_ball</object>
         <object>objects\coco_cake</object>
         <object>objects\cake_maker</object>
-        <object>objects\fly_man</object>
         <object>objects\dazzle_head</object>
         <object>objects\dazzle_body</object>
+        <object>objects\bob</object>
+        <object>objects\eagle_snake_head</object>
+        <object>objects\eagle_snake_body</object>
+        <object>objects\frame_grid_maker</object>
+        <object>objects\tidal_frame_spawner</object>
+        <object>objects\tidal_frame</object>
+        <object>objects\frame_hit</object>
+        <object>objects\pre_patrick</object>
       </objects>
     </objects>
     <objects name="places">
@@ -864,8 +897,8 @@
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
       <room>rooms\servo_room</room>
-      <room>rooms\dream_room</room>
       <room>rooms\rm_smith_visuals</room>
+      <room>rooms\dream_room</room>
       <room>rooms\bug_room</room>
       <room>rooms\mad_cow_room</room>
       <room>rooms\stone_room</room>
