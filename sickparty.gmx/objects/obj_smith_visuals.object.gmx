@@ -31,6 +31,11 @@ surf = -1;
 surf_w = 420;
 surf_h = 260;
 
+bg_col = $FFFFFF;
+bg_time = 6
+bg_timer = bg_time;
+bg_update = true;
+
 event_user(0);
 </string>
           </argument>
@@ -76,7 +81,10 @@ switch(mode)
     {
     case 0: // red bg with white blocks
         surface_set_target(surf);
-        draw_clear($2C55B7);
+        
+        if (bg_update)
+            bg_col = merge_color($23459F,$0A76BF,random(1));
+        draw_clear(bg_col);
         
         draw_primitive_begin(pr_trianglelist);
         for(var i=0; i&lt;white_squares; i++;)
@@ -127,20 +135,43 @@ switch(mode)
         break;
     
     case 1: // red/blue square
-        if (red_blue_time &gt; 0)
-            red_blue_time--;
-        else
+        if (bg_update)
             {
-            red_blue_time = 6;
             red_blue_swap = !red_blue_swap;
-            red_blue_bgcol = merge_color($FFFFFF,$000000,0.1+random(0.05))
+            red_square_a += (0.5 - red_square_a)*random(0.1);
+            blue_square_a += (0.5 - blue_square_a)*random(0.1);
+            
+            bg_col = merge_color($FFFFFF,$000000,0.1+random(0.1))
+            black_disk_col = merge_color($000000,$FFFFFF,0.1+random(0.1))
+            if (random(1) &lt; 0.1) and (point_distance(white_disk_xto,white_disk_yto,white_disk_x,white_disk_y) &lt; 2)
+                {
+                if (white_disk_len == 0)
+                    white_disk_len = choose(0,30);
+                else
+                    white_disk_len = choose(30,30,30,0);
+                white_disk_dir += random_range(75,150)*choose(-1,1);
+                white_disk_xto = surf_w/2 + lengthdir_x(white_disk_len,white_disk_dir);
+                white_disk_yto = surf_h/2 + lengthdir_y(white_disk_len,white_disk_dir);
+                }
             }
         
         surface_set_target(surf);
-        draw_clear(red_blue_bgcol);
+        draw_clear(bg_col);
         
-        if (red_blue_swap) // red
+        // black disk
+        var _r = sin(current_time/521)*12;
+        draw_set_color(black_disk_col);
+        draw_circle(surf_w/2,surf_h/2,black_disk_rad+_r,0);
+        // white disk
+        var _r = sin((279+current_time)/389)*8;
+        draw_set_color(bg_col);
+        draw_circle(white_disk_x,white_disk_y,white_disk_rad+_r,0);
+        white_disk_x += (white_disk_xto-white_disk_x)*0.1;
+        white_disk_y += (white_disk_yto-white_disk_y)*0.1;
+        
+        if (red_blue_swap)
             {
+            // red square
             draw_set_color($0000FF);
             draw_set_alpha(red_square_a);
             draw_rectangle(red_square_x1,red_square_y1,red_square_x2,red_square_y2,0);
@@ -152,6 +183,7 @@ switch(mode)
             }
         else
             {
+            // blue square
             draw_set_color($FF0000);
             draw_set_alpha(blue_square_a);
             draw_rectangle(blue_square_x1,blue_square_y1,blue_square_x2,blue_square_y2,0);
@@ -166,6 +198,15 @@ switch(mode)
         draw_set_color($FFFFFF);
         draw_set_alpha(1);
         break;
+    }
+
+bg_update = false;
+if (bg_timer &gt; 0)
+    bg_timer--;
+else
+    {
+    bg_timer = bg_time;
+    bg_update = true;
     }
 </string>
           </argument>
@@ -228,8 +269,16 @@ blue_square_x2 = _x+_scl;
 blue_square_y2 = _x+_scl;
 blue_square_a = 0.75;
 red_blue_swap = true;
-red_blue_time = 6;
 red_blue_bgcol = merge_color($FFFFFF,$000000,0.1+random(0.05));
+black_disk_rad = 96;
+black_disk_col = merge_color($000000,$FFFFFF,0.1+random(0.05));
+white_disk_rad = 32;
+white_disk_len = choose(0,30);
+white_disk_dir = random(360);
+white_disk_xto = surf_w/2 + lengthdir_x(white_disk_len,white_disk_dir);
+white_disk_yto = surf_h/2 + lengthdir_y(white_disk_len,white_disk_dir);
+white_disk_x = surf_w/2;
+white_disk_y = surf_h/2;
 </string>
           </argument>
         </arguments>
