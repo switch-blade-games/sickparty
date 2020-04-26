@@ -230,6 +230,7 @@
       <sprites name="wheat">
         <sprite>sprites\wheat_ball_spr</sprite>
         <sprite>sprites\wheat_head_spr</sprite>
+        <sprite>sprites\letter_seed_spr</sprite>
       </sprites>
       <sprites name="desire">
         <sprite>sprites\desire_head_spr</sprite>
@@ -288,6 +289,17 @@
         <sprite>sprites\stone_man_spr</sprite>
         <sprite>sprites\green_sky_spr</sprite>
       </sprites>
+      <sprites name="servo">
+        <sprite>sprites\servo_BG_spr</sprite>
+        <sprite>sprites\servo_spr</sprite>
+        <sprite>sprites\red_light_spr</sprite>
+        <sprite>sprites\green_light_spr</sprite>
+        <sprite>sprites\ball_net_spr</sprite>
+        <sprite>sprites\crimson_ball_spr</sprite>
+        <sprite>sprites\coco_cake_spr</sprite>
+        <sprite>sprites\fly_man_spr</sprite>
+        <sprite>sprites\dazzle_spr</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
     <sprite>sprites\type_small_font_spr</sprite>
@@ -313,7 +325,7 @@
     <sprite>sprites\ball_20_spr</sprite>
     <sprite>sprites\ball_40_spr</sprite>
     <sprite>sprites\tip_spr</sprite>
-    <sprites name="dream_sprites">
+    <sprites name="hoard_sprites">
       <sprite>sprites\small_soup_spr</sprite>
       <sprite>sprites\small_stain_spr</sprite>
       <sprite>sprites\spr_egg</sprite>
@@ -374,11 +386,11 @@
       <sprite>sprites\root_spr</sprite>
       <sprite>sprites\shnab_text_spr</sprite>
       <sprite>sprites\abstract_ticker_spr</sprite>
+      <sprite>sprites\goop_spr</sprite>
     </sprites>
-    <sprite>sprites\letter_seed_spr</sprite>
     <sprite>sprites\mast_spr</sprite>
     <sprite>sprites\explode_black_spr</sprite>
-    <sprites name="msuhroom_forset">
+    <sprites name="mushroom_forest">
       <sprite>sprites\BG_plant_spr</sprite>
       <sprite>sprites\mushroom_floor_spr</sprite>
       <sprite>sprites\mushroom_spr</sprite>
@@ -578,10 +590,10 @@
     <shader type="GLSLES">shaders\shd_flash.shader</shader>
   </shaders>
   <objects name="objects">
+    <object>objects\dev_cheater</object>
     <object>objects\text_drawer</object>
     <object>objects\title_drawer</object>
     <object>objects\music_player</object>
-    <object>objects\bobble_base</object>
     <objects name="REDACTED">
       <objects name="000-Front End">
         <object>objects\obj_debug_marker</object>
@@ -725,28 +737,16 @@
       <object>objects\cam_push_R</object>
       <object>objects\U_cam</object>
     </objects>
-    <object>objects\dev_cheater</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_control</object>
     <object>objects\obj_shader</object>
     <object>objects\obj_player</object>
-    <objects name="bug">
-      <object>objects\bug_controller</object>
-      <object>objects\bug_orb</object>
-      <object>objects\bug_base</object>
-      <object>objects\bug_segment</object>
-      <object>objects\bug_top</object>
-      <object>objects\bug_seg_rig</object>
-      <object>objects\brick_fly</object>
-      <object>objects\cater_head</object>
-      <object>objects\cater_body</object>
-    </objects>
     <object>objects\view_grid</object>
     <objects name="hoards">
+      <object>objects\hoard_toggle</object>
       <object>objects\blank_hoard</object>
       <object>objects\red_hoard</object>
       <object>objects\eye_hoard</object>
-      <object>objects\hoard_toggle</object>
       <object>objects\bab_hoard</object>
       <object>objects\pollack_hoard</object>
       <object>objects\beat_hoard</object>
@@ -761,76 +761,109 @@
       <object>objects\stain_hoard</object>
       <object>objects\static_hoard</object>
       <object>objects\virus_hoard</object>
-    </objects>
-    <objects name="wheat">
-      <object>objects\wheat_controller</object>
-      <object>objects\wheat_ball</object>
-      <object>objects\wheat_head</object>
-      <object>objects\wheat_head_dead</object>
-      <object>objects\letter_seed</object>
-      <object>objects\mast</object>
-    </objects>
-    <objects name="mad_cow">
-      <object>objects\cow_train</object>
-      <object>objects\mad_text_drawer</object>
-      <object>objects\rice_pile</object>
-      <object>objects\rice</object>
-      <object>objects\rooster</object>
-      <object>objects\nagle</object>
+      <object>objects\goop_hoard</object>
     </objects>
     <object>objects\ball_40</object>
-    <objects name="desire">
-      <object>objects\desire_controller</object>
-      <object>objects\desire_mouth</object>
-      <object>objects\desire_obj</object>
-      <object>objects\eagle_shot</object>
-      <object>objects\blue_monkey</object>
+    <objects name="bosses">
+      <objects name="bug">
+        <object>objects\bug_controller</object>
+        <object>objects\bug_orb</object>
+        <object>objects\bug_base</object>
+        <object>objects\bug_segment</object>
+        <object>objects\bug_top</object>
+        <object>objects\bug_seg_rig</object>
+        <object>objects\brick_fly</object>
+        <object>objects\cater_head</object>
+        <object>objects\cater_body</object>
+      </objects>
+      <objects name="wheat">
+        <object>objects\wheat_controller</object>
+        <object>objects\wheat_ball</object>
+        <object>objects\wheat_head</object>
+        <object>objects\wheat_head_dead</object>
+        <object>objects\letter_seed</object>
+        <object>objects\mast</object>
+      </objects>
+      <objects name="red_scream">
+        <object>objects\red_scream_controller</object>
+      </objects>
+      <objects name="big_eye">
+        <object>objects\big_eye_controller</object>
+        <object>objects\bow</object>
+        <object>objects\big_vine</object>
+        <object>objects\wolf_head</object>
+        <object>objects\flash_ball</object>
+      </objects>
+      <objects name="eric">
+        <object>objects\eric</object>
+      </objects>
+      <objects name="desire">
+        <object>objects\desire_controller</object>
+        <object>objects\desire_mouth</object>
+        <object>objects\desire_obj</object>
+        <object>objects\eagle_shot</object>
+        <object>objects\blue_monkey</object>
+      </objects>
+      <objects name="servo">
+        <object>objects\servo_controller</object>
+        <object>objects\servo</object>
+        <object>objects\green_light</object>
+        <object>objects\red_light</object>
+        <object>objects\crimson_ball</object>
+        <object>objects\coco_cake</object>
+        <object>objects\cake_maker</object>
+        <object>objects\fly_man</object>
+        <object>objects\dazzle_head</object>
+        <object>objects\dazzle_body</object>
+      </objects>
     </objects>
-    <objects name="orange">
-      <object>objects\orange_controller</object>
-      <object>objects\droplet</object>
-      <object>objects\orange_ball</object>
-      <object>objects\orange_cloud</object>
+    <objects name="places">
+      <objects name="stone_place">
+        <object>objects\stone_man</object>
+      </objects>
+      <objects name="mushroom_forest">
+        <object>objects\mushroom_floor</object>
+        <object>objects\mushroom_controller</object>
+        <object>objects\mushroom</object>
+        <object>objects\BG_plant</object>
+        <object>objects\lens_man</object>
+        <object>objects\end_spawn</object>
+        <object>objects\mushroom_spawner</object>
+        <object>objects\flower_tower</object>
+        <object>objects\flower_ball</object>
+        <object>objects\ship</object>
+        <object>objects\water_ant</object>
+        <object>objects\ship_trig</object>
+      </objects>
+      <objects name="orange">
+        <object>objects\orange_controller</object>
+        <object>objects\droplet</object>
+        <object>objects\orange_ball</object>
+        <object>objects\orange_cloud</object>
+        <object>objects\blue_rig_maker</object>
+        <object>objects\blue_rig_under</object>
+        <object>objects\blue_face</object>
+        <object>objects\red_ball</object>
+      </objects>
+      <objects name="mad_cow">
+        <object>objects\cow_train</object>
+        <object>objects\mad_text_drawer</object>
+        <object>objects\rice_pile</object>
+        <object>objects\rice</object>
+        <object>objects\rooster</object>
+        <object>objects\nagle</object>
+      </objects>
     </objects>
-    <objects name="blue_branch">
-      <object>objects\blue_rig_maker</object>
-      <object>objects\blue_rig_under</object>
-      <object>objects\blue_face</object>
-      <object>objects\red_ball</object>
-      <object>objects\eric</object>
-    </objects>
-    <objects name="big_eye">
-      <object>objects\big_eye_controller</object>
-      <object>objects\bow</object>
-      <object>objects\big_vine</object>
-      <object>objects\wolf_head</object>
-      <object>objects\flash_ball</object>
-    </objects>
-    <objects name="red_scream">
-      <object>objects\red_scream_controller</object>
-    </objects>
-    <objects name="mushroom_forset">
-      <object>objects\mushroom_floor</object>
-      <object>objects\mushroom_controller</object>
-      <object>objects\mushroom</object>
-      <object>objects\BG_plant</object>
-      <object>objects\lens_man</object>
-      <object>objects\end_spawn</object>
-      <object>objects\mushroom_spawner</object>
-      <object>objects\flower_tower</object>
-      <object>objects\flower_ball</object>
-      <object>objects\ship</object>
-      <object>objects\water_ant</object>
-      <object>objects\ship_trig</object>
-    </objects>
-    <objects name="stone_place">
-      <object>objects\stone_man</object>
+    <objects name="drawing_stuff">
+      <object>objects\bobble_base</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="000-FrontEnd">
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
+      <room>rooms\servo_room</room>
+      <room>rooms\dream_room</room>
       <room>rooms\bug_room</room>
       <room>rooms\mad_cow_room</room>
       <room>rooms\stone_room</room>
@@ -840,7 +873,6 @@
       <room>rooms\orange_room</room>
       <room>rooms\desire_room</room>
       <room>rooms\wheat_room</room>
-      <room>rooms\dream_room</room>
       <room>rooms\black_room</room>
       <rooms name="demo_rooms">
         <room>rooms\demo_room</room>
