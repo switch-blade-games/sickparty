@@ -8,7 +8,7 @@ if (move_state == mState.dead)
         // gameover?
         if (global.P1LIVES <= 0)
             {
-            room_goto(game_over_room);
+            game_restart();
             exit;
             }
         
@@ -16,27 +16,13 @@ if (move_state == mState.dead)
         life = lifemax;
         respawn_timer = respawn_time;
         block_projectiles = true;
-        death_time = get_timer();
+        life_time = get_timer();
         
         xspeed = 0;
         yspeed = 0;
         no_mb = false;
         mb_id = noone;
-        
-        // normal vs. moto respawn
-        /*
-        if (instance_exists(motor_controller))
-        or (instance_exists(sub_controller))
-            {
-            move_state = mState.moto;
-            drop = false;
-            }
-        else
-            {
-            move_state = mState.walk;
-            drop = true;
-            }
-        */
+        vehicle_id = noone;
         
         move_state = mState.walk;
         drop = true;

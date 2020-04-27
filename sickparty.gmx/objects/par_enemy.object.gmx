@@ -39,7 +39,7 @@ block_projectiles = true; // block projectiles
 // targeting
 target_id = noone;
 target_num = 0;
-death_time = get_timer();
+life_time = get_timer();
 
 // sprite flashing
 flash = 0;

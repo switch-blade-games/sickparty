@@ -40,9 +40,9 @@ else if (_target_mode == 2) // longest alive
     var _time = get_timer();
     with(_target_obj)
         {
-        if (_time-death_time > _target_max)
+        if (_time-life_time > _target_max)
             {
-            _target_max = _time-death_time;
+            _target_max = _time-life_time;
             _target_id  = id;
             }
         }

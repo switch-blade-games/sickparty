@@ -146,6 +146,7 @@ if (keyboard_check_pressed(vk_f1))
 // don't hurt player in debug mode
 if (global.DEBUG)
     {
+    global.P1LIVES = 99;
     with(par_actor)
         take_damage = false;
     }
