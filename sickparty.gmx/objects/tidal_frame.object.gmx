@@ -59,7 +59,7 @@ DROPgrav=0.1
 
 PREshocktime=60
 
-SHOCKtime=30
+SHOCKtime=120
 </string>
           </argument>
         </arguments>
@@ -86,6 +86,9 @@ SHOCKtime=30
 if(instance_number(HITSON)=1)
 with(HITSON)
     instance_destroy()
+    
+    
+audio_stop_sound(paint_snd)
 </string>
           </argument>
         </arguments>
@@ -139,6 +142,9 @@ state=DROP
 
 state=WAIT
 
+audio_stop_sound(paint_snd)
+
+
 with(tidal_frame_spawner)
     instance_destroy()
 
@@ -171,6 +177,13 @@ alarm[3]=30
             <string>///SHOCK
 
 state=SHOCK
+
+audio_stop_sound(frame_stop_snd)
+
+play_snd(paint_snd,true)
+snd_pitch(paint_snd,0.5)
+
+
 
 HITSON=instance_create(x,y,frame_hit);
 
@@ -253,8 +266,14 @@ if(state=OUT){
         y=dad.y
         state=WAIT
         
-        with(frame_grid_maker)
+        play_snd(frame_out_snd,false)
+        snd_pitch(frame_out_snd,0.2)
+        
+        with(frame_grid_maker){
             FRAMEcount+=1
+            
+            
+            }
         
         with(dad)
             instance_destroy()

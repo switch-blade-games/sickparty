@@ -14,7 +14,7 @@
 
 background_color=DARKpurple
 
-//instance_create(0,0,music_player)
+instance_create(0,0,music_player)
 
 instance_create(0,0,servo_controller)
 
@@ -175,6 +175,8 @@ instance_create(0,0,servo_controller)
     <instance objName="cake_maker" x="460" y="80" name="inst_C66FE51E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cake_maker" x="460" y="170" name="inst_9F9A179E" locked="0" code="MYid=2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pre_patrick" x="360" y="120" name="inst_34668C92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="scramble_test" x="160" y="80" name="inst_116D4533" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="scramble_test" x="260" y="170" name="inst_B0938369" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

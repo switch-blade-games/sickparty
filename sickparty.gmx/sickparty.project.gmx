@@ -95,6 +95,20 @@
     <sound>sound\orb_shot_snd</sound>
     <sound>sound\cater_snd</sound>
     <sound>sound\bug_hit_snd</sound>
+    <sound>sound\servo_bass_snd</sound>
+    <sound>sound\flap_snd</sound>
+    <sound>sound\paint_snd</sound>
+    <sound>sound\frame_out_snd</sound>
+    <sound>sound\frame_stop_snd</sound>
+    <sound>sound\big_wobble_snd</sound>
+    <sound>sound\virus_snd</sound>
+    <sound>sound\beetle_snd</sound>
+    <sound>sound\virus_shake_snd</sound>
+    <sound>sound\virus_drop_snd</sound>
+    <sound>sound\servo_hit_snd</sound>
+    <sound>sound\bob_snd</sound>
+    <sound>sound\servo_amb_snd</sound>
+    <sound>sound\servo_flip_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -311,6 +325,7 @@
         <sprite>sprites\frame_flash_spr</sprite>
         <sprite>sprites\frame_hit_spr</sprite>
         <sprite>sprites\black_canvas_spr</sprite>
+        <sprite>sprites\grid_test_spr</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
@@ -607,6 +622,7 @@
       <script>scripts\paint_draw.gml</script>
       <script>scripts\paint_destroy.gml</script>
     </scripts>
+    <script>scripts\spr_scramble.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_grayscale.shader</shader>
@@ -848,6 +864,7 @@
         <object>objects\tidal_frame</object>
         <object>objects\frame_hit</object>
         <object>objects\pre_patrick</object>
+        <object>objects\scramble_test</object>
       </objects>
     </objects>
     <objects name="places">

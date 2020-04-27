@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>par_enemy_projectile</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>OUT=1
+            <string>event_inherited();
+destroy_on_contact = true;
+
+OUT=1
 ROLL=2
 DROP=3
 
@@ -113,6 +116,8 @@ global.Vtab-=1
             <string>shake=false
 motion_set(270,DROPspe)
 
+play_snd(virus_drop_snd,0.3)
+
 </string>
           </argument>
         </arguments>
@@ -197,6 +202,7 @@ if(x&gt;obj_player.x-Hrange)
 if(random(20)&lt;1){
 speed=0
 state=DROP
+play_snd(virus_shake_snd,0.5)
 alarm[0]=DROPtime
 global.Vtab+=1
 }

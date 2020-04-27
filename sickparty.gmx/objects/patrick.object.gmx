@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>par_enemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rate=30
+            <string>enemy_init(500)
+
+rate=30
 
 //alarm[0]=rate
 
@@ -37,6 +39,7 @@ FLIP=-1
 STAND=1
 FLIPPING=2
 BOB=2
+EAGLE=3
 
 state=STAND
 
@@ -47,7 +50,7 @@ alarm[3]=STANDtime
 
 //alarm[5]=60
 
-FLIPtime=300
+FLIPtime=500
 
 
 BOBtime=600
@@ -178,6 +181,10 @@ state=BOB
             <kind>1</kind>
             <string>///finish flip
 
+play_snd(servo_flip_snd,false)
+
+snd_pitch(servo_flip_snd,0.1)
+
 state=STAND
 if(FLIP=-1)
 FLIP=1
@@ -226,6 +233,8 @@ with(cake_maker){
 state=FLIPPING
 
 alarm[2]=FLIPtime
+
+
 
 
 instance_create(0,0,frame_grid_maker)
@@ -278,6 +287,9 @@ var SON=instance_create(x,y+(OFFSET*FLIP),bob);
 
 SON.Ydest=50
 SON.FLIP=-1
+
+play_snd(bob_snd,false)
+audio_sound_pitch(bob_snd,0.5)
 }
 
 
@@ -286,6 +298,11 @@ if(PLACE=1){
 var SON=instance_create(x,y+(OFFSET*FLIP),bob);
 
 SON.Ydest=110
+
+
+play_snd(bob_snd,false)
+audio_sound_pitch(bob_snd,1.5)
+
 }
 
 }
@@ -312,11 +329,13 @@ var TYPE=choose(0,0,0,1);
 if(TYPE=0){
 SON.sprite_index=virus_ball_spr
 SON.virusmode=true
+play_snd(virus_snd,0.5)
 }
 
 if(TYPE=1){
 SON.sprite_index=ceiling_beetle_spr
 SON.beetlemode=true
+play_snd(beetle_snd,0.5)
 }
 
 
@@ -324,6 +343,57 @@ SON.beetlemode=true
 }
 
 alarm[0]=rate
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bullet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>play_snd(servo_hit_snd,false)
+
+snd_pitch(servo_hit_snd,1)
+
+with(servo_controller)
+image_index=random(100)
 </string>
           </argument>
         </arguments>
@@ -349,11 +419,9 @@ alarm[0]=rate
             <string>image_yscale=-FLIP
 
 
-draw_self()
+draw_enemy_self()
 
 
-if(state=FLIPPING)
-    draw_sprite(node_spr,-1,x,y)
     
     
     

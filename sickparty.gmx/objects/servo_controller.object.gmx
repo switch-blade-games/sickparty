@@ -28,6 +28,8 @@
             <string>global.SERVOx=x
 global.SERVOy=y
 
+image_speed=0
+
 ONrate=600
 
 OFFrate=120
