@@ -42,9 +42,9 @@ SPR3num=2
 
 
 //the amount of time for each respecitve sprite
-SPR1time=20
-SPR2time=10
-SPR3time=6
+SPR1time=2
+SPR2time=2
+SPR3time=2
 
 //argument0 = "background" sprite 1, etc
 hoard_init(-1,-1,-1,1)

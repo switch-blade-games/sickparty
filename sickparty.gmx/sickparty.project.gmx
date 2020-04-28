@@ -109,6 +109,14 @@
     <sound>sound\bob_snd</sound>
     <sound>sound\servo_amb_snd</sound>
     <sound>sound\servo_flip_snd</sound>
+    <sound>sound\ape_1_snd</sound>
+    <sound>sound\ape_2_snd</sound>
+    <sound>sound\ape_3_snd</sound>
+    <sound>sound\ape_4_snd</sound>
+    <sound>sound\init_junk_snd</sound>
+    <sound>sound\servo_die_snd</sound>
+    <sound>sound\drawer_room_snd</sound>
+    <sound>sound\servo_cry_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="REDACTED">
@@ -304,6 +312,7 @@
         <sprite>sprites\green_sky_spr</sprite>
       </sprites>
       <sprites name="servo">
+        <sprite>sprites\servo_back_spr</sprite>
         <sprite>sprites\servo_BG_spr</sprite>
         <sprite>sprites\servo_spr</sprite>
         <sprite>sprites\red_light_spr</sprite>
@@ -326,6 +335,9 @@
         <sprite>sprites\frame_hit_spr</sprite>
         <sprite>sprites\black_canvas_spr</sprite>
         <sprite>sprites\grid_test_spr</sprite>
+        <sprite>sprites\servo_drawer_spr</sprite>
+        <sprite>sprites\RGB_strip_spr</sprite>
+        <sprite>sprites\RGB_hit_spr</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\ransom_med_spr</sprite>
@@ -575,6 +587,7 @@
         <script>scripts\tail_destroy.gml</script>
       </scripts>
       <scripts name="fonts / text">
+        <script>scripts\ransom_init.gml</script>
         <script>scripts\draw_ransom.gml</script>
         <script>scripts\random_font_med.gml</script>
         <script>scripts\random_font_large.gml</script>
@@ -607,6 +620,7 @@
         <script>scripts\MC_3_step.gml</script>
         <script>scripts\MC_4_create.gml</script>
         <script>scripts\MC_4_step.gml</script>
+        <script>scripts\MC_stop_all.gml</script>
       </scripts>
       <scripts name="ds_grid">
         <script>scripts\ds_grid_placer.gml</script>
@@ -634,6 +648,7 @@
     <object>objects\dev_cheater</object>
     <object>objects\text_drawer</object>
     <object>objects\title_drawer</object>
+    <object>objects\intro_controller</object>
     <object>objects\music_player</object>
     <objects name="REDACTED">
       <objects name="000-Front End">
@@ -848,6 +863,8 @@
       <objects name="servo">
         <object>objects\servo_controller</object>
         <object>objects\patrick</object>
+        <object>objects\pre_patrick</object>
+        <object>objects\patrick_die</object>
         <object>objects\servo</object>
         <object>objects\green_light</object>
         <object>objects\red_light</object>
@@ -863,8 +880,10 @@
         <object>objects\tidal_frame_spawner</object>
         <object>objects\tidal_frame</object>
         <object>objects\frame_hit</object>
-        <object>objects\pre_patrick</object>
         <object>objects\scramble_test</object>
+        <object>objects\servo_drawer_BG</object>
+        <object>objects\servo_back_BG</object>
+        <object>objects\R_slice</object>
       </objects>
     </objects>
     <objects name="places">
@@ -914,6 +933,7 @@
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
       <room>rooms\servo_room</room>
+      <room>rooms\intro_room</room>
       <room>rooms\rm_smith_visuals</room>
       <room>rooms\dream_room</room>
       <room>rooms\bug_room</room>

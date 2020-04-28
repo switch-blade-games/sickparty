@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>70</depth>
+  <depth>100</depth>
   <persistent>0</persistent>
   <parentName>hoard_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -36,15 +36,15 @@ SPR3=brown_root_spr
 
 
 //the number of each respective sprite
-SPR1num=10
-SPR2num=4
+SPR1num=20
+SPR2num=20
 SPR3num=20
 
 
 //the amount of time for each respecitve sprite
-SPR1time=20
-SPR2time=10
-SPR3time=6
+SPR1time=2
+SPR2time=3
+SPR3time=4
 
 
 //argument0 = "background" sprite 1, etc

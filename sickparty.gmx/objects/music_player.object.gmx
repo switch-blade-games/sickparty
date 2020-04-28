@@ -94,6 +94,13 @@ MC_2_create(flap_snd,20,100,audio_sound_length(flap_snd),0.6)
 MC_3_create(servo_amb_snd,1000,120,audio_sound_length(servo_amb_snd),0.4)
 MC_4_create(-1,600,600,audio_sound_length(jangle_snd),0.3)
 }
+
+if(room=intro_room){
+MC_1_create(ape_1_snd,200,300,audio_sound_length(ape_1_snd),0.4)
+MC_2_create(init_junk_snd,100,60,audio_sound_length(init_junk_snd),0.2)
+MC_3_create(ape_3_snd,200,300,audio_sound_length(ape_3_snd),0.4)
+MC_4_create(ape_4_snd,200,300,audio_sound_length(ape_4_snd),0.3)
+}
 </string>
           </argument>
         </arguments>

@@ -3,7 +3,7 @@
   <spriteName>servo_BG_spr</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>200</depth>
+  <depth>90</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,8 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.SERVOx=x
+            <string>
+
+global.SERVOx=x
 global.SERVOy=y
+
+
+//other BGS
+instance_create(global.SERVOx-20,global.SERVOy-20,servo_back_BG)
+
+instance_create(global.SERVOx-20,global.SERVOy-20,servo_drawer_BG)
 
 image_speed=0
 
