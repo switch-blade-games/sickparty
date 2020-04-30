@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>RANGE=120
+            <string>////REMOVE LATER!!!
+global.SERVOx=0
+global.SERVOy=0
+
+RANGE=120
 
 play_snd(servo_cry_snd,false)
 
@@ -76,17 +80,35 @@ with(frame_hit)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var SLICEson=instance_create(global.SERVOx+20,global.SERVOy+20+random(100),R_slice);
+            <string>//slices
 
-SLICEson.MAIN=true
+var SLICEone=instance_create(global.SERVOx+20,global.SERVOy+20+random(100),R_slice);
 
-var SLICEtwo=instance_create(global.SERVOx+140,global.SERVOy+20+random(100),R_slice);
+SLICEone.MYindex=1
 
-SLICEtwo.image_index=1
+var SLICEtwo=instance_create(global.SERVOx+20,global.SERVOy+20+random(100),R_slice);
 
-var SLICEthree= instance_create(global.SERVOx+260,global.SERVOy+20+random(100),R_slice);
+SLICEtwo.MYindex=2
 
-SLICEthree.image_index=2
+//var SLICEthree= instance_create(global.SERVOx+20,global.SERVOy+20+random(100),R_slice);
+
+//SLICEthree.MYindex=3
+
+//nodes
+
+var NODEone=instance_create(global.SERVOx+200,global.SERVOy+40,slice_drawer);
+
+NODEone.MYindex=1
+
+var NODEtwo=instance_create(global.SERVOx+200,global.SERVOy+200,slice_drawer);
+
+NODEtwo.MYindex=2
+
+//var NODEthree=instance_create(global.SERVOx+200,global.SERVOy+40,slice_drawer);
+
+//NODEthree.MYindex=3
+
+
 
 audio_stop_sound(i_wanna_snd)
 
@@ -115,10 +137,12 @@ with(servo_controller)
     visible=false
 
 
-
+/*
     
 var RANK=instance_create(x,y,rankin);
 RANK.image_yscale=image_yscale
+
+*/
 
 instance_destroy()
 </string>

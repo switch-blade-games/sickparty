@@ -320,6 +320,7 @@
         <sprite>sprites\fly_man_flip_spr</sprite>
         <sprite>sprites\servo_back_spr</sprite>
         <sprite>sprites\servo_BG_spr</sprite>
+        <sprite>sprites\servo_drawer_spr</sprite>
         <sprite>sprites\servo_spr</sprite>
         <sprite>sprites\red_light_spr</sprite>
         <sprite>sprites\green_light_spr</sprite>
@@ -340,7 +341,6 @@
         <sprite>sprites\frame_hit_spr</sprite>
         <sprite>sprites\black_canvas_spr</sprite>
         <sprite>sprites\grid_test_spr</sprite>
-        <sprite>sprites\servo_drawer_spr</sprite>
         <sprite>sprites\RGB_strip_spr</sprite>
         <sprite>sprites\RGB_hit_spr</sprite>
         <sprite>sprites\rankin_spr</sprite>
@@ -898,8 +898,6 @@
         <object>objects\scramble_test</object>
         <object>objects\servo_drawer_BG</object>
         <object>objects\servo_back_BG</object>
-        <object>objects\R_slice</object>
-        <object>objects\slice_node</object>
         <object>objects\slice_checker</object>
         <object>objects\rankin</object>
         <object>objects\bell</object>
@@ -909,6 +907,10 @@
         <object>objects\sliver</object>
         <object>objects\lango_ball</object>
         <object>objects\acid_flash</object>
+        <objects name="tri_slicer">
+          <object>objects\R_slice</object>
+          <object>objects\slice_drawer</object>
+        </objects>
       </objects>
     </objects>
     <objects name="places">
