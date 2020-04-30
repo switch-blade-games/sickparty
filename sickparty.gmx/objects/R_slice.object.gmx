@@ -32,10 +32,12 @@ TOP=global.SERVOy+40
 
 BOTTOM=global.SERVOy+190
 
-spe=1
+spe=1+random(1)
 
 motion_set(choose(90,270),spe)
 
+
+MAIN=false
 
 </string>
           </argument>
@@ -67,6 +69,19 @@ if(y&gt;=BOTTOM){
 
     motion_set(90,spe)
 }
+
+
+if(MAIN=true){
+
+    if(instance_number(slice_checker)=0){
+    
+        instance_create(x,y,slice_checker)
+    }
+    
+    slice_checker.x=x
+    slice_checker.y=y
+}
+
 </string>
           </argument>
         </arguments>

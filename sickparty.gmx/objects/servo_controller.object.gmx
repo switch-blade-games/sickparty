@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>play_snd(i_wanna_snd,true)
 
 global.SERVOx=x
 global.SERVOy=y

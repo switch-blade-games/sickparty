@@ -76,11 +76,25 @@ with(frame_hit)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(global.SERVOx+20,global.SERVOy+20+random(100),R_slice)
+            <string>var SLICEson=instance_create(global.SERVOx+20,global.SERVOy+20+random(100),R_slice);
 
-instance_create(global.SERVOx+140,global.SERVOy+20+random(100),R_slice)
+SLICEson.MAIN=true
 
-instance_create(global.SERVOx+260,global.SERVOy+20+random(100),R_slice)
+var SLICEtwo=instance_create(global.SERVOx+140,global.SERVOy+20+random(100),R_slice);
+
+SLICEtwo.image_index=1
+
+var SLICEthree= instance_create(global.SERVOx+260,global.SERVOy+20+random(100),R_slice);
+
+SLICEthree.image_index=2
+
+audio_stop_sound(i_wanna_snd)
+
+audio_stop_sound(servo_die_snd)
+
+audio_stop_sound(frame_out_snd)
+
+audio_stop_sound(frame_stop_snd)
 
 with(music_player){
     MC_stop_all()
@@ -103,7 +117,8 @@ with(servo_controller)
 
 
     
-
+var RANK=instance_create(x,y,rankin);
+RANK.image_yscale=image_yscale
 
 instance_destroy()
 </string>
