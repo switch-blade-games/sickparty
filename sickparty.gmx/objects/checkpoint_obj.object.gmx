@@ -25,8 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>CHK=1
-Yplace=-1
+            <string>active = true;
+
+checkpoint_set = false;
+checkpoint_index = 0;
 </string>
           </argument>
         </arguments>
@@ -49,9 +51,17 @@ Yplace=-1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.CHECKPOINT&lt;CHK)
-if(obj_player.x&gt;x)
-    global.CHECKPOINT=CHK
+            <string>if (!active)
+    exit;
+
+if (!checkpoint_set) and (global.CHECKPOINT &lt; checkpoint_index)
+    {
+    if (JB_cam.x &gt;= x)
+        {
+        global.CHECKPOINT = checkpoint_index;
+        checkpoint_set = true;
+        }
+    }
 </string>
           </argument>
         </arguments>

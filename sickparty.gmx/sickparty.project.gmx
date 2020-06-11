@@ -587,7 +587,7 @@
       <script>scripts\enemy_hit.gml</script>
       <scripts name="camera / checkpoints">
         <script>scripts\checkpoint_check.gml</script>
-        <script>scripts\Rfollow.gml</script>
+        <script>scripts\camera_follow.gml</script>
         <script>scripts\Yfollow.gml</script>
       </scripts>
       <scripts name="bug">
@@ -651,6 +651,9 @@
     </scripts>
     <script>scripts\spr_scramble.gml</script>
     <script>scripts\ds_make_shuffle.gml</script>
+    <script>scripts\camera_set_axis.gml</script>
+    <script>scripts\camera_set_direction.gml</script>
+    <script>scripts\camera_set_margin.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_grayscale.shader</shader>
