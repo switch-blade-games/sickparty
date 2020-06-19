@@ -174,7 +174,7 @@ instance_create(0,0,servo_controller)
     <instance objName="obj_reflector" x="400" y="200" name="inst_67EC9326" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cake_maker" x="460" y="80" name="inst_C66FE51E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cake_maker" x="460" y="170" name="inst_9F9A179E" locked="0" code="MYid=2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="patrick_die" x="360" y="120" name="inst_FAD98BC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pre_patrick" x="360" y="120" name="inst_69D6D5F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
