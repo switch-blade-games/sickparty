@@ -3,25 +3,23 @@ if (!instance_exists(par_actor))
 
 with(checkpoint_obj)
     {
-    if (checkpoint_index < global.CHECKPOINT)
-        active = false;
-    else if (checkpoint_index == global.CHECKPOINT)
+    if (CHK < global.CHECKPOINT)
+        instance_destroy();
+    
+    var SETindex = MYindex;
+    var SETstate = MYstate;
+    var SETx = x;
+    var SETy = y;
+    
+    if (CHK = global.CHECKPOINT)
         {
-        checkpoint_set = true;
-        
-        var _state = camera_state;
-        var _axis = camera_axis;
-        var _node = camera_node;
-        var _x = x;
-        var _y = y;
-        
         with(JB_cam)
             {
-            state = _state;
-            axis = _axis;
-            node_index = _node;
-            x = _x;
-            y = _y;
+            state = SETstate;
+            cam_x = SETx;
+            cam_y = SETy;
+            if (SETindex != -1)
+                Ycurrent = MYarray[SETindex];
             }
         with(par_actor)
             {

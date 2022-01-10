@@ -25,70 +25,87 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// don't deactivate instances outside view for two frames
-deactivate_buffer = 2;
-
-// camera states
+            <string>// camera states
 enum camState
     {
-    locked,
     free,
-    jog
+    right,
+    diag_u,
+    up,
+    down,
+    diag_d,
+    jog_u,
+    jog_r,
+    jog_d,
+    jog_r_player,
+    right_dead,
+    locked
     }
-
-// states and flags
-if (room_width == 400) and (room_height = 240)
-    {
-    state = camState.locked;
-    camera_set_axis();
-    }
-else
-    {
-    state = camState.free;
-    camera_set_axis(true,false,false,false);
-    camera_set_margin(180,120);
-    }
-
-// boundaries
-bound_x = true;
-bound_y = true;
-bound_x1 = 0;
-bound_y1 = 0;
-bound_x2 = room_width;
-bound_y2 = room_height;
-
-// frame
-frame_w = 400;
-frame_h = 240;
-frame_w_to = 400;
-frame_h_to = 240;
-frame_w_delta = 1;
-frame_h_delta = 1;
 
 // target
 target_obj = par_actor;
 target_x = 0;
 target_y = 0;
+cam_x = 0;
+cam_y = 0;
 
-jog_x = 0;
-jog_y = 0;
-jog_end_x = false;
-jog_end_y = false;
-jog_end_state = camState.locked;
-jog_end_script = -1;
-jog_end_args = -1;
+BUFFER = true;
+alarm[0] = 2;
 
-if (instance_exists(par_actor)) and (state != camState.locked)
-    {
-    x = par_actor.x;
-    y = par_actor.y;
-    }
+Ycurrent = 0;
+Ydist = 0;
+// movement speeds
+JOGspe = 2;
+DJOGspe = 10;
+RJOGx=0;
+
+
+
+        MYarray[0] = 0;
+        if (instance_exists(target_obj))
+            MYarray[0] = max(0,target_obj.y-140);
+
+    
+cam_y = MYarray[Ycurrent];
+if (instance_exists(target_obj))
+    cam_x = target_obj.x;
+
+// initial states
+if (room_width == 400) and (room_height = 240)
+    state = camState.locked;
+else
+    state = camState.right;
 
 // audio listener
+var ear_x = view_xview[0]+view_wview[0]/2;
+var ear_y = view_yview[0]+view_hview[0]/2;
 audio_falloff_set_model(audio_falloff_exponent_distance);
-audio_listener_position(x,y,0);
-audio_listener_orientation(x,y,1000,0,-1,0);
+audio_listener_position(ear_x,ear_y,0);
+audio_listener_orientation(ear_x,ear_y,1000,0,-1,0);
 audio_listener_velocity(0,0,0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>BUFFER = false;
 </string>
           </argument>
         </arguments>
@@ -112,138 +129,135 @@ audio_listener_velocity(0,0,0);
           <argument>
             <kind>1</kind>
             <string>// deactivate objects
-if (deactivate_buffer &gt; 0)
-    deactivate_buffer--;
-else
+if (!BUFFER)
     camera_deactivate(100);
 
 // focus on a target object
-if (state == camState.free)
+if (instance_exists(target_obj))
     {
-    if (instance_exists(target_obj))
+    var xmin = +9999; var ymin = +9999;
+    var xmax = -9999; var ymax = -9999;
+    with(target_obj)
         {
-        var xmin = +9999; var ymin = +9999;
-        var xmax = -9999; var ymax = -9999;
-        with(target_obj)
-            {
-            if (x &lt; xmin)
-                xmin = x;
-            if (x &gt; xmax)
-                xmax = x;
-            if (y &lt; ymin)
-                ymin = y;
-            if (y &gt; ymax)
-                ymax = y;
-            }
-        target_x = round((xmin+xmax)/2);
-        target_y = round((ymin+ymax)/2);
+        if (x &lt; xmin)
+            xmin = x;
+        if (x &gt; xmax)
+            xmax = x;
+        if (y &lt; ymin)
+            ymin = y;
+        if (y &gt; ymax)
+            ymax = y;
         }
+    target_x = round((xmin+xmax)/2);
+    target_y = round((ymin+ymax)/2);
     }
 
 // finite state machine
 switch(state)
     {
     case camState.free:
-        if (axis == 0)
-            break;
-        
-        if ((axis &amp; 1) == 1) and (target_x &gt; x+margin_x) // right
-            x += xspeed;
-        if ((axis &amp; 2) == 2) and (target_y &lt; y-margin_y) // up
-            y -= yspeed;
-        if ((axis &amp; 4) == 4) and (target_x &lt; x-margin_x) // left
-            x -= xspeed;
-        if ((axis &amp; 8) == 8) and (target_y &gt; y+margin_y) // down
-            y += yspeed;
+        cam_x = target_x-180;
+        cam_y = target_y-140;
         break;
     
-    case camState.jog:
-        if (axis == 0)
-            break;
+    case camState.right:
+        Rfollow(180);
+        cam_y = MYarray[Ycurrent];
+        break;
+
+    case camState.diag_u:
+        Rfollow(180);
+        Yfollow(120);
+        break;
+
+    case camState.jog_u:
+        Rfollow(180);
+        cam_y -= JOGspe;
+        if (cam_y &lt;= MYarray[Ycurrent])
+            {
+            state = camState.right;
+            cam_y = MYarray[Ycurrent];
+            }
+        break;
+
+    case camState.jog_r:
+        cam_x += JOGspe;
+        if (cam_x &gt;= RJOGx)
+            {
+            state = camState.locked;
+            cam_x = RJOGx;
+            
+            if (room == final_factory)
+                {
+                with(moloch_lady)
+                    {
+                    state = SURPRISE;
+                    alarm[1] = SURPRISEtime;
+                    }
+                with(cat)
+                    state = JUMP;
+                }
+            }
+        cam_y = MYarray[Ycurrent];
+        break;
+    
+    case camState.jog_d:
+        cam_y += DJOGspe;
+        if (cam_y &gt;= target_y-120)
+            {
+            state = camState.down;
+            cam_y = target_y-120;
+            }
+        break;
+
+    case camState.down:
+        if (cam_y &lt; target_y-120)
+            cam_y = target_y-120;
+        break;
         
-        if ((axis &amp; 1) == 1) and (x &lt; jog_x) // right
+    case camState.up:
+        if (cam_y &gt; target_y-140)
+            cam_y = target_y-140;
+        break;
+    
+    case camState.jog_r_player:
+        cam_x += JOGspe;
+        if (cam_x &gt;= target_x-180)
             {
-            x += xspeed;
-            if (x &gt;= jog_x)
-                {
-                x = jog_x;
-                axis -= 1;
-                jog_end_x = true;
-                }
+            state = camState.right;
+            cam_x = target_x-180;
             }
-        if ((axis &amp; 2) == 2) and (y &gt; jog_y) // up
-            {
-            y -= yspeed;
-            if (y &lt;= jog_y)
-                {
-                y = jog_y;
-                axis -= 2;
-                jog_end_y = true;
-                }
-            }
-        if ((axis &amp; 4) == 4) and (x &gt; jog_x) // left
-            {
-            x -= xspeed;
-            if (x &lt;= jog_x)
-                {
-                x = jog_x;
-                axis -= 4;
-                jog_end_x = true;
-                }
-            }
-        if ((axis &amp; 8) == 8) and (y &lt; jog_y) // down
-            {
-            y += yspeed;
-            if (y &gt;= jog_y)
-                {
-                y = jog_y;
-                axis -= 8;
-                jog_end_y = true;
-                }
-            }
-        if (jog_end_x) and (jog_end_y)
-            {
-            state = jog_end_state;
-            if (script_exists(jog_end_script))
-                script_execute(jog_end_script,jog_end_args);
-            jog_end_state = camState.locked;
-            jog_end_script = -1;
-            jog_end_args = -1;
-            }
+        cam_y = MYarray[Ycurrent];
+        break;
+    
+    case camState.right_dead:
+        if (target_x &gt; view_xview[0]+180)
+            state = camState.right;
+        cam_y = MYarray[Ycurrent];
+        break;
+    
+    case camState.locked:
+        cam_x = x;
+        cam_y = y;
         break;
     }
 
-// boundaries
-if (bound_x)
-    x = clamp(x,bound_x1 + view_wview[0]/2,bound_x2 - view_wview[0]/2);
-if (bound_y)
-    y = clamp(y,bound_y1 + view_hview[0]/2,bound_y2 - view_hview[0]/2);
-
-// frame
-if (frame_w_to &gt; frame_w)
-    frame_w = min(frame_w+frame_w_delta,frame_w_to);
-if (frame_w_to &lt; frame_w)
-    frame_w = max(frame_w-frame_w_delta,frame_w_to);
-if (frame_h_to &gt; frame_h)
-    frame_h = min(frame_h+frame_h_delta,frame_h_to);
-if (frame_h_to &lt; frame_h)
-    frame_h = max(frame_h-frame_h_delta,frame_h_to);
-view_wview[0] = round(frame_w);
-view_hview[0] = round(frame_h);
-
+x = round(cam_x);
+y = round(cam_y);
+    
 // apply screenshake/nudge
-var vx = x - round(frame_w/2);
-var vy = y - round(frame_h/2);
-vx += global.xnudge;
-vy += global.ynudge;
+var cx = x+global.xnudge;
+var cy = y+global.ynudge;
 if (global.xshake &gt; 1)
-    vx += random_range(-global.xshake,global.xshake);
+    cx += random_range(-global.xshake,global.xshake);
 if (global.yshake &gt; 1)
-    vy += random_range(-global.yshake,global.yshake);
+    cy += random_range(-global.yshake,global.yshake);
 
 // move the view and round it
-view_xview[0] = round(vx);
-view_yview[0] = round(vy);
+view_xview[0] += (cx-view_xview[0])*0.25;
+view_yview[0] += (cy-view_yview[0])*0.25;
+view_xview[0] = round(view_xview[0]);
+view_yview[0] = round(view_yview[0]);
 
 // decay screenshake values
 global.xnudge *= 0.8;
@@ -252,8 +266,10 @@ global.xshake *= 0.8;
 global.yshake *= 0.8;
 
 // move audio listener to camera position
-audio_listener_position(x,y,0);
-audio_listener_orientation(x,y,1000,0,-1,0);
+var ear_x = view_xview[0]+view_wview[0]/2;
+var ear_y = view_yview[0]+view_hview[0]/2;
+audio_listener_position(ear_x,ear_y,0);
+audio_listener_orientation(ear_x,ear_y,1000,0,-1,0);
 audio_listener_velocity(0,0,0);
 </string>
           </argument>

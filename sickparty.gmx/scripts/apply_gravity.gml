@@ -50,7 +50,7 @@ switch(move_state)
                 var off = round(ternary(x1<x2,amt*len,len-(amt*len)));
                 
                 // make sure we can smoothly transition to monkeybar
-                if (off >= 0) and (off <= len) and (abs(y-(yto+32)) <= max(4,yspeed))
+                if (off >= 0) and (off <= len) and (abs(y-(yto+32)) <= 4)
                 and (yspeed > 0) and (can_mb) and (!place_meeting(x,yto+32,par_solid))
                     {
                     move_state = mState.mb;
@@ -106,7 +106,7 @@ switch(move_state)
                 var off = round(ternary(x1<x2,amt*len,len-(amt*len)));
                 
                 // make sure we can smoothly continue hanging from a monkeybar
-                if (off >= 0) and (off <= len) and (abs(y-(yto+32)) <= max(4,yspeed))
+                if (off >= 0) and (off <= len) and (abs(y-(yto+32)) <= 4)
                 and (can_mb) and (!place_meeting(x,yto+32,par_solid))
                     {
                     move_state = mState.mb;
@@ -189,7 +189,7 @@ switch(move_state)
                 var off = round(ternary(x1<x2,amt*len,len-(amt*len)));
                 
                 // make sure we can smoothly transition to monkeybar
-                if (off >= 0) and (off <= len) and (abs(y-(yto+32)) <= max(4,yspeed))
+                if (off >= 0) and (off <= len) and (abs(y-(yto+32)) <= yspeed)
                 and (yspeed > 0) and (can_mb) and (!place_meeting(x,yto+32,par_solid))
                     {
                     move_state = mState.mb;
