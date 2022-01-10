@@ -266,7 +266,6 @@
         <sprite>sprites\eagle_shot_spr</sprite>
         <sprite>sprites\blue_monkey_spr</sprite>
         <sprite>sprites\desire_mouth_open_spr</sprite>
-        <sprite>sprites\red_tri_spr</sprite>
       </sprites>
       <sprites name="orange">
         <sprite>sprites\orange_ball_spr</sprite>
@@ -874,7 +873,6 @@
         <object>objects\desire_obj</object>
         <object>objects\eagle_shot</object>
         <object>objects\blue_monkey</object>
-        <object>objects\red_tri</object>
       </objects>
       <objects name="servo">
         <object>objects\servo_controller</object>
@@ -962,7 +960,6 @@
       <room>rooms\init_room</room>
       <room>rooms\menu_room</room>
       <room>rooms\servo_room</room>
-      <room>rooms\desire_room</room>
       <room>rooms\intro_room</room>
       <room>rooms\rm_smith_visuals</room>
       <room>rooms\dream_room</room>
@@ -973,6 +970,7 @@
       <room>rooms\red_scream_room</room>
       <room>rooms\big_eye_room</room>
       <room>rooms\orange_room</room>
+      <room>rooms\desire_room</room>
       <room>rooms\wheat_room</room>
       <room>rooms\black_room</room>
       <rooms name="demo_rooms">

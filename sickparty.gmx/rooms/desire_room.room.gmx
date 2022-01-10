@@ -68,7 +68,6 @@ instance_create(0,0,music_player)
     <instance objName="obj_wall" x="-20" y="-60" name="inst_BE6EE395" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-20" y="-80" name="inst_5BEF045A" locked="0" code="" scaleX="22" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="40" y="120" name="inst_43024FC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="red_tri" x="180" y="160" name="inst_80C879B3" locked="0" code="" scaleX="2" scaleY="1.78723406791687" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="grey_trash" x="0" y="240" w="20" h="20" xo="80" yo="40" id="10000255" name="inst_A361CCA0" depth="90" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
